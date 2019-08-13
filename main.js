@@ -1,4 +1,4 @@
-alert("loads");
+alert("Initial Load");
 /* Global Variables */
 let dateRange;
 let selectCabin;
@@ -25,10 +25,9 @@ const stepTwoLeft = document.getElementById('step-two-left');
 const stepThreeLeft = document.getElementById('step-three-left');
 const stepFourLeft = document.getElementById('step-four-left');
 
-alert("pass Variables");
+alert("Pass Variables");
 
 /* Background Images Slideshow */
-alert("PassVARIABLES");
 /*
 $(".rslides8-5").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
@@ -147,6 +146,8 @@ let urlCabinParse;
 let urlDateParse;
 let urlStartDateParse;
 let urlEndDateParse;
+
+alert("calendar variables");
 if(window.location.search != ""){
   url= window.location.search;
   urlCabinParse = url.substring(url.indexOf("selectCabin")+12,url.indexOf("&daterange"));
@@ -156,7 +157,7 @@ if(window.location.search != ""){
   urlStartDateParse = urlDateParse.substring(0,10);
   urlEndDateParse = urlDateParse.substring(13,23);
   }
-
+alert("calendar halfway");
 const today = new Date();
 const nextWeek = new Date(today.getTime() + 7*24*60*60*1000);
 $(function() {
@@ -172,7 +173,7 @@ $(function() {
       autoApply: true
       });
 });
-
+alert("Pass calendar");
 /* CONTACT US PAGE */
 function contactUsMail(){
   const contactName = document.getElementById("contact-name").value;
