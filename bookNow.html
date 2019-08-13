@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="white-background" lang="en">
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book Now at Sheldon R. Larson Ranch</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> 
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <nav style="background-color: rgba(255,255,255,1)">
+            <div class="logo-title-container">
+              <a href="index.html"><img class="logo-title" src="images/logo_title.png" alt=""></a>
+          </div>
+            <ul>
+                <li><a href="bookNow.html">Book Now</a></li>
+                <li><a href="overview.html">About Us <span><img src="images/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </li>
+                <li><a href="cabinOverview.html">Cabins <span><img src="images/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul> 
+                        <li><a href="mainCabin.html">Main Cabin</a></li>
+                        <li><a href="guestCabin.html">Guest Cabin</a></li>
+                        <li><a href="otherEvents.html">Other Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="availability.html">Availability</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li id="menu-icon" class="menu-trigger"><a><i class="fa fa-bars menu-icon"></i></a></li>
+                <li id="menu-close-icon" class="menu-close"><a><i class="fa fa-times close-icon"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Header -->
+        <aside id="mobile-menu" class="mobile-menu">
+            <div class="menu-inner">
+                <ul class="menu-pages">
+                    <li class="menu-page-link"><a href="index.html">Home</a></li>
+                    <li class="menu-page-link"><a href="bookNow.html">Book Now</a></li>
+                    <li class="menu-page-link"><a id="about-us">About Us <span><img src="images/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                        <ul id="about-us-sub-menu-pages">
+                            <li><a href="overview.html">Overview</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                        <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="mainCabin.html">Main Cabin</a></li>
+                            <li><a href="guestCabin.html">Guest Cabin</a></li>
+                            <li><a href="otherEvents.html">Other Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-page-link"><a href="gallery.html">Gallery</a></li>
+                    <li class="menu-page-link"><a href="availability.html">Availability</a></li>
+                    <li class="menu-page-link"><a href="attractions.html">Attractions</a></li>
+                    <li class="menu-page-link"><a href="map.html">Map</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="overlay"></div>
+      
+        <div class="booking-container">
+          <!-- Left Portion -->
+          <div class="bookNow-left">
+            <div id="step-one-left">
+              <p id="step-one-p">Stay Details</p>
+              <i id="step-one-circle" class="fa fa-circle-o circle-icon"></i>
+              <i id="step-one-check" class="fa fa-check-circle-o check-circle-icon"></i>
+            </div>
+            <div id="step-two-left">
+              <p id="step-two-p">Contact Info</p>
+              <i id="step-two-circle" class="fa fa-circle-o circle-icon"></i>
+              <i id="step-two-check" class="fa fa-check-circle-o check-circle-icon"></i>
+            </div>
+            <div id="step-three-left">
+              <p id="step-three-p">Comments</p>
+              <i id="step-three-circle" class="fa fa-circle-o circle-icon"></i>
+              <i id="step-three-check" class="fa fa-check-circle-o check-circle-icon"></i>
+            </div>
+            <div id="step-four-left">
+              <p id="step-four-p">Confirm</p>
+              <i id="step-four-circle" class="fa fa-circle-o circle-icon"></i>
+              <i id="step-four-check" class="fa fa-check-circle-o check-circle-icon"></i>
+            </div>
+          </div>
+
+          <!-- Middle Portion -->
+          <div class="bookNow-middle">
+            <!-- Step One Completed -->
+            <div id="step-one-done">
+              <p id= "step-one-done-cabin">*Please select which cabin*</p>
+              <p id= "step-one-done-date-range">*Please select the desired dates for you stay*</p>
+              <i class="fa fa-moon-o moon-icon"></i>
+              <p id= "step-one-done-nights">- nights</p>
+            </div>
+  
+            <!-- Step One while filling out -->
+            <div id="step-one-filling">
+              <div class="step-one-middle">
+                <div id="borderLeft1"></div>
+                <div class="cabin-select-container">
+                  <i class="fa fa-home cabin-icon"></i>
+                  <label>Cabin</label>
+                  <select id="cabin-selection" class="cabin-select">
+                      <option value="main-cabin">Main Cabin</option>
+                      <option value="guest-cabin">Guest Cabin</option>
+                      <option value="both-cabins">Both Cabins</option>
+                  </select>
+                </div>
+                <div class="date-select-container">
+                  <i class="fa fa-calendar date-icon"></i>
+                  <label>Dates</label>
+                  <input id="date-select" type="text" name="daterange"/>
+                </div>
+                <div class="ppl-selection">
+                  <div class="number-select">
+                    <i class="fa fa-users person-icon"></i>
+                    <label>Adults (13+)</label>
+                    <input id="adults" class="form-control select-people" type="number" min="0" value="0">
+                  </div>
+                  <div class="number-select">
+                    <label>Children (12-)</label>
+                    <input id="children" class="form-control select-people" type="number" min="0" value="0">
+                  </div>
+                  <div class="number-select">
+                    <label>Pets</label>
+                    <input id="pets" class="form-control select-people" type="number" min="0" value="0">
+                  </div>
+                </div>
+              </div>
+              <p>*For last minute booking, please call 435-340-0075</p>
+              <button id="continue-btn-1">CONTINUE</button>
+            </div>
+
+            <!-- Step Two Completed -->
+            <div id="step-two-done">
+                <p id= "step-two-done-name">*Please enter your name*</p>
+                <p id= "step-two-done-phone">*Please enter a phone number*</p>
+                <i class="fa fa-envelope envelope-icon"></i>
+                <p id= "step-two-done-email">*Please enter an e-mail address*</p>
+            </div>
+            <!-- Step Two while filling out -->
+            <div id="step-two-filling">
+              <div class="step-two-middle">
+                <div id="borderLeft2"></div>
+                <div class="guest-name-container">
+                  <div class="guest-name">
+                    <i class="fa fa-user person-icon"></i>
+                    <label>First Name</label>
+                    <input id="first-name" type="text">
+                  </div>
+                  <div class="guest-name">
+                    <label>Last Name</label>
+                    <input id="last-name" type="text">
+                  </div>
+                </div>
+                <div class="email-container">
+                  <i class="fa fa-envelope email-icon"></i>
+                  <label>Email Address</label>
+                  <input id="guest-email" type="text"/>
+                </div>
+                <div class="phone-container">
+                  <i class="fa fa-phone phone-icon"></i>
+                  <label id="phone-label">Phone Number</label>
+                  <input id="guest-phone" type="text"/>
+                </div>
+              </div>
+              <button id="previous-btn-2">PREVIOUS</button>
+              <button id="continue-btn-2">CONTINUE</button>
+            </div>
+
+            <!-- Step Three Completed -->
+            <div id="step-three-done">
+                <i class="fa fa-comment comment-icon"></i>
+                <p>Thank you for your additional message! We look forward to making your stay better suited for you!</p>
+            </div>
+            <!-- Step Three while filling out -->
+            <div id="step-three-filling">
+              <div class="step-three-middle">
+                <div id="borderLeft3"></div>
+                <div class="comments-container">
+                  <i class="fa fa-comment comments-icon"></i>
+                  <label id="comment-label">Additional Message for Owner</label>
+                  <textarea id="add-comment"></textarea>
+                </div>
+                <button id="previous-btn-3">PREVIOUS</button>
+                <button id="continue-btn-3">CONTINUE</button>
+              </div>
+            </div>
+
+            <!-- Step Three Completed -->
+            <div id="step-four-done"></div>
+            <!-- Step Three while filling out -->
+            
+            <div id="step-four-filling">
+                <div class="step-four-middle">
+                    <h1>Contact Information</h1>
+                    <p><strong>Name: </strong><span id="confirm-name"></span></p>
+                    <p><strong>E-mail: </strong><span id="confirm-email"></span></p>
+                    <p><strong>Phone #: </strong><span id="confirm-phone"></span></p>
+                    <h1>Group Information</h1>
+                    <p><strong>Total Number of Persons: </strong><span id="confirm-totalNumber"></span></p>
+                    <p><strong>Number of Adults: </strong><span id="confirm-adults"></span></p>
+                    <p><strong>Number of Children: </strong><span id="confirm-children"></span></p>
+                    <p><strong>Number of Pets: </strong><span id="confirm-pets"></span></p>
+                    <h1>Stay Information</h1>
+                    <p><strong>Cabin Selection: </strong><span id="confirm-cabin"></span></p>
+                    <p><strong>Check-In: </strong><span id="confirm-startDate"></span> (after 3:00 pm)</p>
+                    <p><strong>Check-Out: </strong><span id="confirm-endDate"></span> (before 11:00 am)</p>
+                    <p><strong>Number of Nights: </strong><span id="confirm-nights"></span></p>
+                    <h1>Message to Owner</h1>
+                    <p>"<span id="confirm-message"></span>"</p>
+                    <h1 id="total-cost">$<span id="confirm-cost"></span></h1>
+                    <p id="cost-calculator">- night(s) @ $-.--/night</p>
+                    <p id="final-note">*A non-refundable cleaning and security deposit will be required upon confirmation of your booking in order to hold your reservation. This deposit goes toward your total and the remainder will be due upon arrival.</p><br>
+                    <p id="final-note2">We will contact you by email as soon as possible to confirm your booking! If in a rush, please also follow up at (435) 340-0075 or SheldonRLarsonRanch@gmail.com</p>
+                    
+                    <form id="step-four-form" action="https://formspree.io/brock.larson0725@gmail.com" method="POST" target="_blank">
+                        <div id="step-four-form-hidden">
+                            <input id="confirm-name0" type="text" name="Name" readonly>
+                            <input id="confirm-email0" type="text" name="E-mail" readonly>
+                            <input id="confirm-phone0" type="text" name="Phone Number" readonly>
+                            <input id="confirm-cabin0" type="text" name="Cabin" readonly>
+                            <input id="confirm-daterange0" type="text" name="Date Range" readonly>
+                            <input id="confirm-startDate0" type="text" name="Check-In" readonly>
+                            <input id="confirm-endDate0" type="text" name="Check-Out" readonly>
+                            <input id="confirm-nights0" type="text" name="Number of Nights" readonly>
+                            <input id="confirm-totalNumber0" type="text" name="Total Number of People" readonly>
+                            <input id="confirm-adults0" type="text" name="Adults" readonly>
+                            <input id="confirm-children0" type="text" name="Children" readonly>
+                            <input id="confirm-pets0" type="text" name="Pets" readonly>
+                            <input id="confirm-message0" type="text" name="Message" readonly>
+                            <input id="confirm-cost0" type="text" name="Total Cost" readonly>
+                            <input id="cost-calculator0" type="text" name="Cost Calculation" readonly>
+                        </div>
+                        <div id="previous-btn-4">PREVIOUS</div>
+                        <button id="continue-btn-4" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+                <p id="formspree">*Please note that when submitting the form you will be redirected to 'formspree.io' for final secure processing of your booking information</p>
+
+            </div>
+
+          </div>
+
+          <!-- Right Portion -->
+          <div class="bookNow-right">
+            <div class="bookNow-right-container">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=c2hlbGRvbnJsYXJzb25yYW5jaEBnbWFpbC5jb20&amp;color=%237986CB&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border-width:0" ></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;showTitle=1&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;color=%237986CB&amp;showTz=0&amp;showTabs=0&amp;showCalendars=0&amp;src=ZDhzbDQxajMxcWdsamtyMjRqaWc4c2JpNzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F09300" style="border-width:0" ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+
+      <footer style="background-color: rgba(255,255,255,1)">
+        <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.facebook.com/sheldonrlarsonranch/" target="_blank"><img src="images/facebook.svg" height="20" width="20" alt="link to our facebook page"/></a>
+        <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.instagram.com/sheldonrlarsonranch/" target="_blank"><img src="images/instagram.svg" height="20" width="20" alt="link to our instagram page"/></a>
+        <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.airbnb.com/rooms/6987200?source_impression_id=p3_1561644451_CppAMA6DbxaNfKE2&s=hCtNNbnM" target="_blank"><img src="images/airbnb.svg" height="20" width="20" alt="link to our airbnb page"/></a>
+      </footer>
+
+        <!--JQuery and JavaScript Declarations-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="responsiveslides.min.js"></script>                  
+        <script src='main.js'></script>
+        <!--For the page calendar-->
+        <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    </body>
+
+</html>
