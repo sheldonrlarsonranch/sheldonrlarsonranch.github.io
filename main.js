@@ -1,4 +1,4 @@
-
+alert("loads");
 /* Global Variables */
 let dateRange;
 let selectCabin;
@@ -25,7 +25,7 @@ const stepTwoLeft = document.getElementById('step-two-left');
 const stepThreeLeft = document.getElementById('step-three-left');
 const stepFourLeft = document.getElementById('step-four-left');
 
-
+alert("pass variables");
 
 /* Background Images Slideshow */
 $(".rslides8-5").responsiveSlides({
@@ -101,7 +101,7 @@ $(".rslides1-2").responsiveSlides({
   after: function(){}     // Function: After callback
 });
 
-
+alert("Pass slides");
 
 /* Mobile Header */
 function mobileMenuSlideIn(){
@@ -138,7 +138,7 @@ menuClose.addEventListener('click',mobileMenuClose);
 menuOverlay.addEventListener('click',mobileMenuClose);
 cabinsMenu.addEventListener('click', cabinSubMenus);
 aboutUsMenu.addEventListener('click', aboutUsSubMenus);
-
+alert("pass mobile header");
 /* Function for the homepage calendar */
 let url;
 let urlCabinParse;
