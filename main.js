@@ -28,6 +28,7 @@ const stepFourLeft = document.getElementById('step-four-left');
 alert("pass variables");
 
 /* Background Images Slideshow */
+/*
 $(".rslides8-5").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
   speed: 2000,            // Integer: Speed of the transition, in milliseconds
@@ -100,7 +101,7 @@ $(".rslides1-2").responsiveSlides({
   before: function(){},   // Function: Before callback
   after: function(){}     // Function: After callback
 });
-
+*/
 alert("Pass slides");
 
 /* Mobile Header */
