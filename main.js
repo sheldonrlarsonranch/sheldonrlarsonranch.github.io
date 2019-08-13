@@ -25,9 +25,10 @@ const stepTwoLeft = document.getElementById('step-two-left');
 const stepThreeLeft = document.getElementById('step-three-left');
 const stepFourLeft = document.getElementById('step-four-left');
 
-alert("pass variables");
+alert("pass Variables");
 
 /* Background Images Slideshow */
+alert("PassVARIABLES");
 /*
 $(".rslides8-5").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
