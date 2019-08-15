@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*
 body:before {
     content: "";
     display: block;
@@ -32,16 +32,16 @@ body:before {
     -o-background-size: cover;
     background-size: cover;
   }
+*/
 
-/*
-html { 
+body { 
     background: url("../images/background-image.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
-*/
+
 
 :root{
     /* Homepage Booking Form */
@@ -491,14 +491,14 @@ footer a{
 
 /* BOOK NOW PAGE */
 .booking-container{
-    margin-top: 100px;    
+    padding-top: 100px;    
     overflow: hidden;
     width: 100%;
     display: flex;
     flex: 1 1 0;
     justify-content: space-around;
     flex-wrap: nowrap;
-
+    background-color: white;
 }
 
 .bookNow-left{
@@ -1087,6 +1087,10 @@ footer a{
     display: flex;  
     justify-content: space-evenly;
     flex: 1 1 0;
+}
+
+.overview-section1{
+    background-color: #fff;
 }
 
 .overview-section2{
