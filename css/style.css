@@ -320,7 +320,7 @@ input::placeholder{
     background-color: var(--home-form-btn-bg);
     box-shadow: var(--home-form-shdw);
     height: 30px;
-    width: 190px;
+    min-width: 190px;
     border: solid 1px var(--home-form-brdr);
     font-weight: bold;
     cursor: pointer;
