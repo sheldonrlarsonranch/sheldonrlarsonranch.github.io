@@ -1,4 +1,4 @@
-alert("Initial Load");
+alert("Loaded");
 /* Global Variables */
 let dateRange;
 let selectCabin;
@@ -25,85 +25,7 @@ const stepTwoLeft = document.getElementById('step-two-left');
 const stepThreeLeft = document.getElementById('step-three-left');
 const stepFourLeft = document.getElementById('step-four-left');
 
-alert("Pass Variables");
-
-/* Background Images Slideshow */
-/*
-$(".rslides8-5").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 2000,            // Integer: Speed of the transition, in milliseconds
-  timeout: 7000,          // Integer: Time between slide transitions, in milliseconds
-  pager: false,           // Boolean: Show pager, true or false
-  nav: false,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: false,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
-});
-$(".rslides6-5").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 2000,            // Integer: Speed of the transition, in milliseconds
-  timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
-  pager: false,           // Boolean: Show pager, true or false
-  nav: false,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: false,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
-});
-$(".rslides4-5").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 2000,            // Integer: Speed of the transition, in milliseconds
-  timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
-  pager: false,           // Boolean: Show pager, true or false
-  nav: false,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: false,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
-});
-$(".rslides1-2").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 2000,            // Integer: Speed of the transition, in milliseconds
-  timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
-  pager: false,           // Boolean: Show pager, true or false
-  nav: false,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: false,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
-});
-*/
-alert("Pass slides");
-
+alert("Variables");
 /* Mobile Header */
 function mobileMenuSlideIn(){
   mobileMenu.className += ' slide-in';
@@ -139,7 +61,8 @@ menuClose.addEventListener('click',mobileMenuClose);
 menuOverlay.addEventListener('click',mobileMenuClose);
 cabinsMenu.addEventListener('click', cabinSubMenus);
 aboutUsMenu.addEventListener('click', aboutUsSubMenus);
-alert("pass mobile header");
+
+alert("Mobile Header");
 /* Function for the homepage calendar */
 let url;
 let urlCabinParse;
@@ -147,7 +70,6 @@ let urlDateParse;
 let urlStartDateParse;
 let urlEndDateParse;
 
-alert("calendar variables");
 if(window.location.search != ""){
   url= window.location.search;
   urlCabinParse = url.substring(url.indexOf("selectCabin")+12,url.indexOf("&daterange"));
@@ -156,10 +78,11 @@ if(window.location.search != ""){
   urlDateParse = urlDateParse.replace(/%2F/gi, "/");
   urlStartDateParse = urlDateParse.substring(0,10);
   urlEndDateParse = urlDateParse.substring(13,23);
-  }
-alert("calendar halfway");
+}
+alert("Calendar Halfway");
 const today = new Date();
 const nextWeek = new Date(today.getTime() + 7*24*60*60*1000);
+alert("Calendar 3/4");
 $(function() {
   const x=1
     $('input[name="daterange"]').daterangepicker({
@@ -173,7 +96,7 @@ $(function() {
       autoApply: true
       });
 });
-alert("Pass calendar");
+alert("Pass Calendar JQuery");
 /* CONTACT US PAGE */
 function contactUsMail(){
   const contactName = document.getElementById("contact-name").value;
@@ -191,9 +114,12 @@ function contactUsMail(){
   const contactSubject = document.getElementById("contact-subject").value;
   const contactMessage = document.getElementById("contact-message").value;
   
-  alert("Opening message in your default mail app. You may alternatively contact us by email at SheldonRLarsonRanch@gmail.com, or by phone at (435)340-0075. Thank you!")
-  window.location.assign("mailto:sheldonrlarsonranch@gmail.com?Subject=" + encodeURIComponent(contactSubject) + "&body=" + encodeURIComponent(contactMessage) + "%0D%0A%0D%0A----------------%0D%0A" + encodeURIComponent(contactName) + "%0D%0A" + encodeURIComponent(contactEmail) + "%0D%0A" + encodeURIComponent(contactPhone));
+  if(confirm("Opening message in your default mail app. You may alternatively contact us by email at SheldonRLarsonRanch@gmail.com, or by phone at (435)340-0075. Thank you!")){
+    window.location.assign("mailto:sheldonrlarsonranch@gmail.com?Subject=" + encodeURIComponent(contactSubject) + "&body=" + encodeURIComponent(contactMessage) + "%0D%0A%0D%0A----------------%0D%0A" + encodeURIComponent(contactName) + "%0D%0A" + encodeURIComponent(contactEmail) + "%0D%0A" + encodeURIComponent(contactPhone));
+  }
+
 }
+
 
 /* MAIN CABIN PAGES */
 window.addEventListener("hashchange", function () {
@@ -619,7 +545,7 @@ function toStepFour(){
 
   confirmBooking();
 }
-
+alert("Before book now listeners");
 bookPrev2.addEventListener("click", toStepOne);
 bookPrev4.addEventListener("click", toStepThree);
 bookPrev3.addEventListener("click", toStepTwo);
@@ -627,7 +553,5 @@ bookCont1.addEventListener("click", toStepTwo);
 bookCont2.addEventListener("click", toStepThree);
 bookCont3.addEventListener("click", toStepFour);
 
-document.getElementById("date-select").value = "7/7/2017 - 8/8/2018";
-
-
+alert("The End");
 

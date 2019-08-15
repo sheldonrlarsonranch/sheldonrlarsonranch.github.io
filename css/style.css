@@ -18,7 +18,7 @@
 }
 
 html { 
-    background: url("images/background-image.jpg") no-repeat center center fixed; 
+    background: url("../images/background-image.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,6 +46,22 @@ html {
 
 
 /* HOME PAGE */
+.homepage-background-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.homepage-background{
+    z-index: -1;
+}
+
+.homepage-background img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100vw;
+    height: 100vh;
+}
+
 #homepage{
     width: 100vw;
     height: 100vh;
