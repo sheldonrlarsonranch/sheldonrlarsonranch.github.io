@@ -320,22 +320,9 @@ input::placeholder{
     background-color: var(--home-form-btn-bg);
     box-shadow: var(--home-form-shdw);
     height: 30px;
+    width: 190px;
     border: solid 1px var(--home-form-brdr);
     font-weight: bold;
-    cursor: pointer;
-}
-
-.icon {
-    color: black;
-    position: absolute;
-    top: 19px;
-    left: 335px;
-    font-size: 15px;
-    text-align: center;
-    pointer-events: none;
-}
-
-.icon:hover{
     cursor: pointer;
 }
 
@@ -2951,11 +2938,6 @@ fieldset {
 
     .input-grp{
         margin: 5px auto;
-    }
-
-    .icon {
-        top: 45%;
-        left: 88%;
     }
 }
 
