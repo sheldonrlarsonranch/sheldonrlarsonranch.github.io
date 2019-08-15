@@ -19,11 +19,11 @@
 
 html { 
     background: url("../images/background-image.jpg") no-repeat center center fixed; 
-    background-size: auto 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
   }
 
 :root{
@@ -45,8 +45,8 @@ html {
     background: none;
 }
 
-
 /* HOME PAGE */
+
 .homepage-background-container{
     width: 100vw;
     height: 100vh;
@@ -320,7 +320,7 @@ input::placeholder{
     background-color: var(--home-form-btn-bg);
     box-shadow: var(--home-form-shdw);
     height: 30px;
-    width: auto;
+    width: 190px;
     border: solid 1px var(--home-form-brdr);
     font-weight: bold;
     cursor: pointer;
@@ -450,6 +450,14 @@ footer a{
 .map-container iframe{
     height: 100%;
     width: 100%;
+}
+
+.map-howTo{
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    height: 20px;
+    transform: translateX(-50%);
 }
 
 .background-image{
@@ -2923,6 +2931,12 @@ fieldset {
     footer a{
         padding: 0px 3px; 
     }
+
+    /* Map How To Button */
+    .map-howTo{
+        top: -25px;
+    }
+
 }
 
 @media only screen and (max-width: 485px){
