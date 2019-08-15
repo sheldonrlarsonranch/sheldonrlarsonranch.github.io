@@ -17,7 +17,15 @@
     padding: 0;
 }
 
-html:before {
+html { 
+    background: url("../images/background-image.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body:before {
     content: "";
     display: block;
     position: fixed;
@@ -32,7 +40,6 @@ html:before {
     -o-background-size: cover;
     background-size: cover;
   }
-
 
 :root{
     /* Homepage Booking Form */
@@ -2307,7 +2314,8 @@ fieldset {
     /* Book Now Page */
     .booking-container{
         display: block; /**/
-        margin-top: 100px;    
+        min-height: 100vh; /**/
+        padding-top: 100px;    
         overflow: hidden;
         width: 100%;
         flex: 1 1 0;
