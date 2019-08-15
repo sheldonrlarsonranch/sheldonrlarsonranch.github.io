@@ -7,7 +7,7 @@
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/daterangepicker.css" type="text/css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     </head>
 
     <body>
@@ -36,8 +36,8 @@
                 <li><a href="availability.html">Availability</a></li>
                 <li><a href="attractions.html">Attractions</a></li>
                 <li><a href="map.html">Map</a></li>
-                <li id="menu-icon" class="menu-trigger"><a><i class="fa fa-bars menu-icon"></i></a></li>
-                <li id="menu-close-icon" class="menu-close"><a><i class="fa fa-times close-icon"></i></a></li>
+                <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
+                <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
             </ul>
         </nav>
 
@@ -75,23 +75,23 @@
           <div class="bookNow-left">
             <div id="step-one-left">
               <p id="step-one-p">Stay Details</p>
-              <i id="step-one-circle" class="fa fa-circle-o circle-icon"></i>
-              <i id="step-one-check" class="fa fa-check-circle-o check-circle-icon"></i>
+              <i id="step-one-circle" class="far fa-circle circle-icon"></i>
+              <i id="step-one-check" class="far fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-two-left">
               <p id="step-two-p">Contact Info</p>
-              <i id="step-two-circle" class="fa fa-circle-o circle-icon"></i>
-              <i id="step-two-check" class="fa fa-check-circle-o check-circle-icon"></i>
+              <i id="step-two-circle" class="far fa-circle circle-icon"></i>
+              <i id="step-two-check" class="far fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-three-left">
               <p id="step-three-p">Comments</p>
-              <i id="step-three-circle" class="fa fa-circle-o circle-icon"></i>
-              <i id="step-three-check" class="fa fa-check-circle-o check-circle-icon"></i>
+              <i id="step-three-circle" class="far fa-circle circle-icon"></i>
+              <i id="step-three-check" class="far fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-four-left">
               <p id="step-four-p">Confirm</p>
-              <i id="step-four-circle" class="fa fa-circle-o circle-icon"></i>
-              <i id="step-four-check" class="fa fa-check-circle-o check-circle-icon"></i>
+              <i id="step-four-circle" class="far fa-circle circle-icon"></i>
+              <i id="step-four-check" class="far fa-check-circle check-circle-icon"></i>
             </div>
           </div>
 
@@ -101,7 +101,7 @@
             <div id="step-one-done">
               <p id= "step-one-done-cabin">*Please select which cabin*</p>
               <p id= "step-one-done-date-range">*Please select the desired dates for you stay*</p>
-              <i class="fa fa-moon-o moon-icon"></i>
+              <i class="fas fa-moon moon-icon"></i>
               <p id= "step-one-done-nights">- nights</p>
             </div>
   
@@ -110,7 +110,7 @@
               <div class="step-one-middle">
                 <div id="borderLeft1"></div>
                 <div class="cabin-select-container">
-                  <i class="fa fa-home cabin-icon"></i>
+                  <i class="fas fa-home cabin-icon"></i>
                   <label>Cabin</label>
                   <select id="cabin-selection" class="cabin-select">
                       <option value="main-cabin">Main Cabin</option>
@@ -119,13 +119,13 @@
                   </select>
                 </div>
                 <div class="date-select-container">
-                  <i class="fa fa-calendar date-icon"></i>
+                  <i class="far fa-calendar-alt date-icon"></i>
                   <label>Dates</label>
                   <input id="date-select" type="text" name="daterange"/>
                 </div>
                 <div class="ppl-selection">
                   <div class="number-select">
-                    <i class="fa fa-users person-icon"></i>
+                    <i class="fas fa-user-friends person-icon"></i>
                     <label>Adults (13+)</label>
                     <input id="adults" class="form-control select-people" type="number" min="0" value="0">
                   </div>
@@ -147,7 +147,7 @@
             <div id="step-two-done">
                 <p id= "step-two-done-name">*Please enter your name*</p>
                 <p id= "step-two-done-phone">*Please enter a phone number*</p>
-                <i class="fa fa-envelope envelope-icon"></i>
+                <i class="fas fa-envelope envelope-icon"></i>
                 <p id= "step-two-done-email">*Please enter an e-mail address*</p>
             </div>
             <!-- Step Two while filling out -->
@@ -156,7 +156,7 @@
                 <div id="borderLeft2"></div>
                 <div class="guest-name-container">
                   <div class="guest-name">
-                    <i class="fa fa-user person-icon"></i>
+                    <i class="fas fa-user person-icon"></i>
                     <label>First Name</label>
                     <input id="first-name" type="text">
                   </div>
@@ -166,14 +166,14 @@
                   </div>
                 </div>
                 <div class="email-container">
-                  <i class="fa fa-envelope email-icon"></i>
+                  <i class="fas fa-envelope email-icon"></i>
                   <label>Email Address</label>
                   <input id="guest-email" type="text"/>
                 </div>
                 <div class="phone-container">
-                  <i class="fa fa-phone phone-icon"></i>
+                  <i class="fas fa-phone phone-icon"></i>
                   <label id="phone-label">Phone Number</label>
-                  <input id="guest-phone" type="text"/>
+                  <input id="guest-phone" type="tel"/>
                 </div>
               </div>
               <button id="previous-btn-2">PREVIOUS</button>
@@ -182,7 +182,7 @@
 
             <!-- Step Three Completed -->
             <div id="step-three-done">
-                <i class="fa fa-comment comment-icon"></i>
+                <i class="fas fa-comment comment-icon"></i>
                 <p>Thank you for your additional message! We look forward to making your stay better suited for you!</p>
             </div>
             <!-- Step Three while filling out -->
@@ -190,7 +190,7 @@
               <div class="step-three-middle">
                 <div id="borderLeft3"></div>
                 <div class="comments-container">
-                  <i class="fa fa-comment comments-icon"></i>
+                  <i class="fas fa-comment comments-icon"></i>
                   <label id="comment-label">Additional Message for Owner</label>
                   <textarea id="add-comment"></textarea>
                 </div>

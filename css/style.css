@@ -19,6 +19,7 @@
 
 html { 
     background: url("../images/background-image.jpg") no-repeat center center fixed; 
+    background-size: auto 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -326,11 +327,11 @@ input::placeholder{
 
 .icon {
     color: black;
-    text-align: center;
     position: absolute;
     top: 19px;
     left: 335px;
     font-size: 15px;
+    text-align: center;
     pointer-events: none;
 }
 
@@ -1427,6 +1428,7 @@ footer a{
 
 .cabin-overview-cabins-container{
     height: 200px;
+    width: 95%;
     width: calc(100% - 32px);
     margin: 16px auto 16px auto;
 }
@@ -1453,7 +1455,7 @@ footer a{
 }
 
 .cabin-overview-text-column-left{
-    width: 45%;
+    width: 30%;
     height: auto;
     float: left;
     padding: 0;
@@ -1461,7 +1463,7 @@ footer a{
 }
 
 .cabin-overview-text-column-right{
-    width: 50%;
+    width: 65%;
     height: auto;
     float: left;
     padding: 0;
@@ -1501,7 +1503,7 @@ footer a{
     width: 10px;
     color: #555;
     padding: 0;
-    margin: 0;
+    margin: 0 3px 0 0;
 }
 
 .cabin-overview-icon-right{
@@ -1535,7 +1537,7 @@ footer a{
 }
 
 .cabin-overview-cabins-price a{
-    text-decoration: none;
+    text-decoration: underline;
     color: #555;
 }
 
@@ -2285,11 +2287,12 @@ fieldset {
     .logo-title-container{
         width: 75%;
     }
-    /* Gallery Page */
+    /* Overview Container */
     .overview-container{
         width: 100vw;
     }
 
+    /* Gallery Page */
     .gallery img{
         width: 150px;
     }
@@ -2951,8 +2954,8 @@ fieldset {
     }
 
     .icon {
-        top: 63px;
-        left: 200px;
+        top: 45%;
+        left: 88%;
     }
 }
 
