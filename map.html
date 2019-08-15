@@ -69,9 +69,22 @@
         </aside>
         <div id="overlay"></div>
 
+        <button type="button" id="map-howTo-open" class="map-howTo">How To Use Map</button>
+        <button type="button" id="map-howTo-close" class="map-howTo">Close Explanation</button>
+        <div id="map-overlay"></div>
+        
+        <div id="map-explanation">
+            <p>&#8210; This map contains a list of our favorite places and activites around Sanpete County. This list includes everything from favorite restaraunts to favorite trails. Simply zoom in/out and move around the map to see where everything is for you to plan your trip.</p>
+            <p>&#8210; Click on any of the icons on the map to pull in a sidebar with more details and directions. Sometimes we've also linked external websites that provide all the information you could ever hope for concerning the activity.</p>
+            <p>&#8210; The top bar has several icons. The top left icon will open or close the sidebar. Open the sidebar to see a comprehensive list of all the activities and categories.</p>
+            <p>&#8210; Clicking the star icon will save the map to your own personal google maps account. That way you can access it from your google maps mobile app or your own google maps account! (To see it after you've starred this map, go to maps.google.com. Click the 'menu' icon, go to 'Your Places', and then click on 'Maps' and you should see it labeled as "Nearby Attractions - Sheldon R. Larson Ranch")</p>
+            <p>&#8210; The next icon over from the star is the 'share' icon. This allows you to share this map with others via social media or email, or even embed it onto your own website! Finally, the top right icon opens this map into google maps itself so that you can view it in full screen!</p>
+            <p>&#8210; As always, let us know if you have any questions or want any other recommendations!</p>
+            <p>&#8210; (Click anywhere outside of this box to go back to the map)</p>
+        </div>
+
         <div class="map-container">
             <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1GllTUOl9d9QD_GAVsYzoRNSFgxHPmlfb"></iframe>
-            <button type="button" class="map-howTo">How To Use Map</button>
         </div>
         
         <footer>
@@ -84,6 +97,6 @@
         <!--JQuery and JavaScript Declarations-->
         <script src="js/jquery.min.js"></script>
         <script src='js/main.js'></script>
-
+        <script src='js/map.js'></script>
     </body>
 </html>
