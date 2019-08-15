@@ -1,4 +1,3 @@
-alert("Loaded");
 /* Global Variables */
 let dateRange;
 let selectCabin;
@@ -25,7 +24,6 @@ const stepTwoLeft = document.getElementById('step-two-left');
 const stepThreeLeft = document.getElementById('step-three-left');
 const stepFourLeft = document.getElementById('step-four-left');
 
-alert("Variables");
 /* Mobile Header */
 function mobileMenuSlideIn(){
   mobileMenu.className += ' slide-in';
@@ -62,7 +60,6 @@ menuOverlay.addEventListener('click',mobileMenuClose);
 cabinsMenu.addEventListener('click', cabinSubMenus);
 aboutUsMenu.addEventListener('click', aboutUsSubMenus);
 
-alert("Mobile Header");
 /* Function for the homepage calendar */
 let url;
 let urlCabinParse;
@@ -79,10 +76,10 @@ if(window.location.search != ""){
   urlStartDateParse = urlDateParse.substring(0,10);
   urlEndDateParse = urlDateParse.substring(13,23);
 }
-alert("Calendar Halfway");
+
 const today = new Date();
 const nextWeek = new Date(today.getTime() + 7*24*60*60*1000);
-alert("Calendar 3/4");
+
 $(function() {
   const x=1
     $('input[name="daterange"]').daterangepicker({
@@ -96,7 +93,7 @@ $(function() {
       autoApply: true
       });
 });
-alert("Pass Calendar JQuery");
+
 /* CONTACT US PAGE */
 function contactUsMail(){
   const contactName = document.getElementById("contact-name").value;
@@ -545,7 +542,7 @@ function toStepFour(){
 
   confirmBooking();
 }
-alert("Before book now listeners");
+
 bookPrev2.addEventListener("click", toStepOne);
 bookPrev4.addEventListener("click", toStepThree);
 bookPrev3.addEventListener("click", toStepTwo);
@@ -553,5 +550,4 @@ bookCont1.addEventListener("click", toStepTwo);
 bookCont2.addEventListener("click", toStepThree);
 bookCont3.addEventListener("click", toStepFour);
 
-alert("The End");
 
