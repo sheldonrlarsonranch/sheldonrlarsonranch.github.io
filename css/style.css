@@ -1850,11 +1850,69 @@ footer a{
 
 .contact-container {
     width: 100%;
+    min-height: 50vh;
     margin: 50vh 0 0 0;
-    background: #F9F9F9;
+    background-color: #efefef;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+.contact-form-container{
+    width: 50%;
+}
+
+.contact-information{
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 60vh;
+}
+
+.contact-information div{
+    width: 60%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.contact-information h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.contact-information h4 {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.contact-information h5 {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.contact-icon{
+    float: left;
+    color: #555;
+    width: 20px;
+    padding: 3px 0 0 0;
+    margin: 0 10px 0 0;
+    
+}
+
+.contact-information a{
+    text-decoration: none;
+}
+/*
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -1864,7 +1922,6 @@ footer a{
 }
 
 #contact {
-    min-height: 100%; /* For older browser support */
     min-height: calc(100vh - 60px); 
     padding: 25px;
 }
@@ -1969,61 +2026,7 @@ fieldset {
 :-ms-input-placeholder {
     color: #888;
 }
-
-
-.contact-information{
-    display: block;
-    position: absolute;
-    width: 50%;
-    right: 0;
-    top: 0;
-    padding: 0;
-    margin-top: 50vh;
-}
-
-.contact-information div{
-    width: 60%;
-    margin: 0 auto;
-    padding: 25px 0;
-}
-
-.contact-information h3 {
-    display: block;
-    font-size: 30px;
-    font-weight: 300;
-    margin: 0 0 10px 0;
-    padding: 0;
-}
-
-.contact-information h4 {
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 0 15px 0;
-    padding: 0;
-}
-
-.contact-information h5 {
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 20px 0;
-    padding: 0;
-}
-
-.contact-icon{
-    float: left;
-    color: #555;
-    width: 20px;
-    padding: 3px 0 0 0;
-    margin: 0 10px 0 0;
-    
-}
-
-.contact-information a{
-    text-decoration: none;
-}
-
+*/
 /* Reviews Page */
 .reviews-page{
     padding: 20px 10px;
@@ -2066,6 +2069,7 @@ fieldset {
     }
     
     /* Contact Us Page */
+    /*
     #contact {
         display: block;
     }
@@ -2096,7 +2100,11 @@ fieldset {
     #contact button[type="submit"] {
         width: 100%;
     }
-    
+    */
+    .contact-form-container{
+        width: 100%;
+    }
+
     .contact-information{
         display: block;
         position: static;
