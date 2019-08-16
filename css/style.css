@@ -424,19 +424,21 @@ footer a{
 }
 
 .main-calendar{
-    width: 41vw;
-    height: 35vw;
+    width: 45vw;
+    height: 40vw;
     margin: 40px 0px;
     float: left;
-    padding-left: 6vw;
+    padding: 0;
+    padding-left: 3vw;
 }
 
 .guest-calendar{
-    width: 41vw;
-    height: 35vw;
+    width: 45vw;
+    height: 40vw;
     margin: 40px 0px;
     float: right;
-    padding-right: 6vw;
+    padding: 0;
+    padding-right: 3vw;
 }
 
 /* MAP PAGE */
@@ -2211,7 +2213,7 @@ fieldset {
         border-radius: 50%;
         width: 75vw;
         height: 75vw;
-        margin: 16px auto; /**/
+        margin: 16px auto 50px auto; /**/
         object-fit: cover;
     }
     
@@ -3088,28 +3090,29 @@ fieldset {
 @media only screen and (max-aspect-ratio: 1/1){
     /*AVAILABILITY PAGE*/
     .calendar-setup{
-        z-index: 9;
+        display: block;
+        position: static;
         width: 100%;
         height: auto;
-        display: flex;
-        flex: 1 1 0;
-        flex-direction: column;
+        transform: none;
         margin-top: 75px;
-        align-items: center;
+        z-index: 9;
     }
     
     .main-calendar{
-        width: 70vw;
-        height: 60vw;
-        margin: 0;
+        width: 90vw;
+        height: 85vw;
+        margin: 0 auto 24px auto;
         padding: 0;
+        float: none;
     }
     
     .guest-calendar{
-        width: 70vw;
-        height: 60vw;
-        margin: 3vw 0 0 0;
+        width: 90vw;
+        height: 85vw;
+        margin: 0 auto 24px auto;
         padding: 0;
+        float: none;
     }
     
 }
