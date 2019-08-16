@@ -1340,6 +1340,7 @@ footer a{
 /* ATTRACTIONS PAGE */
 .attractions-overview-container{
     height: 200px;
+    width: 95%;
     width: calc(100% - 32px);
     margin: 16px auto 16px auto;
 }
@@ -1411,6 +1412,8 @@ footer a{
 .attractions-overview-clickHere a{
     text-decoration: none;
     color: blue;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -2029,6 +2032,7 @@ fieldset {
     color: #888;
 }
 */
+
 /* Reviews Page */
 .reviews-page{
     padding: 20px 10px;
@@ -2123,6 +2127,22 @@ fieldset {
     /* Gallery Page */
     .overview-container{
         width: 80vw;
+    }
+
+    /*Attractions Page */
+    .attractions-overview-container{
+        display: block; /**/
+        height: 250px; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
+    }
+
+    .cabin-overview-cabins-container{
+        height: 225px; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
     }
 }
 
@@ -2293,6 +2313,44 @@ fieldset {
         width: 90vw;
     }
     
+    /* ATTRACTIONS PAGE */
+    .attractions-overview-container{
+        display: block; /**/
+        height: 225px; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
+        overflow: hidden; /**/
+    }
+
+    .attractions-overview-text{
+        width: 75%; /**/
+        height: 100%;
+        float: left;
+        padding: 0 8px;
+        border: solid 1px #555;
+    }
+
+    .attractions-overview-clickHere{
+        display: block;
+        position: relative; /**/
+        top: -36px; /**/
+        width: 100%; /**/
+        height: auto; /**/
+        text-align: left; /**/
+        border: none; /**/
+        padding: 0; /**/
+        margin: 0; /**/
+    }
+
+    .attractions-overview-clickHere p{
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 8px 0 27%; /**/
+        margin: 0 0; /**/
+        font-size: 18px;
+    }
+
 }
 
 @media only screen and (max-width: 670px){
@@ -2896,6 +2954,35 @@ fieldset {
     .bookNow-right{
         display: none /**/
     }
+
+    /*AVAILABILITY PAGE*/
+    .calendar-setup{
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+        margin-top: 75px;
+        z-index: 9;
+    }
+    
+    .main-calendar{
+        width: 90vw;
+        height: 85vw;
+        margin: 0 auto 24px auto;
+        padding: 0;
+        float: none;
+    }
+    
+    .guest-calendar{
+        width: 90vw;
+        height: 85vw;
+        margin: 0 auto 24px auto;
+        padding: 0;
+        float: none;
+    }
+
+    /*Cabin Overview Page*/
 }
 
 @media only screen and (max-width: 564px){
@@ -2949,6 +3036,56 @@ fieldset {
 
     footer a{
         padding: 0px 3px; 
+    }
+
+    /* ATTRACTIONS PAGE */
+    .attractions-overview-container{
+        display: block; /**/
+        height: auto; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
+    }
+
+    .attractions-overview-image{
+        width: 100%; /**/
+        height: 200px; /**/
+        border: solid 1px #555;
+        border-bottom: none; /**/
+        overflow: hidden;
+        float: none; /**/
+    }
+
+    .attractions-overview-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .attractions-overview-text{
+        width: 100%; /**/
+        height: auto; /**/
+        float: none; /**/
+        border: solid 1px #555;
+    }
+
+
+    .attractions-overview-clickHere{
+        position: static; /**/
+        width: 100%; /**/
+        height: auto; /**/
+        float: none; /**/
+        text-align: left; /**/
+        border: solid 1px #555;
+        border-top: none; /**/
+    }
+
+    .attractions-overview-clickHere p{
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 8px; /**/
+        margin: 0; /**/
+        font-size: 18px;
     }
 
 }
@@ -3010,150 +3147,6 @@ fieldset {
       }
 }
 
-/* ASPECT RATIOS */
-/* Aspect ratios between 8/5 and 6/5*/
-@media only screen and (max-aspect-ratio: 8/5){
-    .rslides8-5, .rslides4-5, .rslides1-2{display: none;}
-    .rslides6-5 {
-        display: block;
-        position: relative;
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .rslides6-5 li {
-        -webkit-backface-visibility: hidden;
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    
-    .rslides6-5 li:first-child {
-        position: relative;
-        display: block;
-        float: left;
-    }
-    
-    .rslides6-5 img {
-        display: block;
-        height: auto;
-        float: left;
-        width: 100%;
-        border: 0;
-    }
-}
-/* Aspect ratios between 6/5 and 4/5*/
-@media only screen and (max-aspect-ratio: 6/5){
-    .rslides8-5, .rslides6-5, .rslides1-2{display: none;}
-    .rslides4-5 {
-        display: block;
-        position: relative;
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .rslides4-5 li {
-        -webkit-backface-visibility: hidden;
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    
-    .rslides4-5 li:first-child {
-        position: relative;
-        display: block;
-        float: left;
-    }
-    
-    .rslides4-5 img {
-        display: block;
-        height: auto;
-        float: left;
-        width: 100%;
-        border: 0;
-    }
-}
-
-/* Exactly square aspect ratio */
-@media only screen and (max-aspect-ratio: 1/1){
-    /*AVAILABILITY PAGE*/
-    .calendar-setup{
-        display: block;
-        position: static;
-        width: 100%;
-        height: auto;
-        transform: none;
-        margin-top: 75px;
-        z-index: 9;
-    }
-    
-    .main-calendar{
-        width: 90vw;
-        height: 85vw;
-        margin: 0 auto 24px auto;
-        padding: 0;
-        float: none;
-    }
-    
-    .guest-calendar{
-        width: 90vw;
-        height: 85vw;
-        margin: 0 auto 24px auto;
-        padding: 0;
-        float: none;
-    }
-    
-}
-
-/* Aspect ratios lower than 4/5 (Will break at lower than 1/2)*/
-@media only screen and (max-aspect-ratio: 4/5){
-    .rslides8-5, .rslides6-5, .rslides4-5{display: none;}
-    .rslides1-2 {
-        display: block;
-        position: relative;
-        list-style: none;
-        overflow: hidden;
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .rslides1-2 li {
-        -webkit-backface-visibility: hidden;
-        position: absolute;
-        display: none;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    
-    .rslides1-2 li:first-child {
-        position: relative;
-        display: block;
-        float: left;
-    }
-    
-    .rslides1-2 img {
-        display: block;
-        height: auto;
-        float: left;
-        width: 100%;
-        border: 0;
-    }
-}
 
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
 .fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}
