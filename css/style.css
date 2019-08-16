@@ -2238,22 +2238,9 @@ fieldset {
     }
       
     .picture-section{
-        width: 100%;
-        height: auto; /**/
-        position: relative; /**/
-        display: flex;
-        flex-direction: column; /**/
-        flex: 1 1 0;        
+        display: none; /**/ 
     }
     
-    .picture-section img{
-        height: 200px; /**/
-        width: 100%; /**/
-        object-fit: cover;
-        overflow: hidden;
-        background: rgba(0,0,0,1);
-        border: solid 1px #555; /**/
-    }
     
     .overview-overlay-container{
         display: flex; /**/
