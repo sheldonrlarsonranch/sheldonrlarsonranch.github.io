@@ -9,8 +9,6 @@ const cabinSubMenu = document.getElementById('cabin-sub-menu-pages');
 const aboutUsMenu = document.getElementById('about-us');
 const aboutUsSubMenu = document.getElementById('about-us-sub-menu-pages');
 
-
-
 /* MOBILE HEADER FUNCTIONALITY */
 function mobileMenuSlideIn(){
   mobileMenu.className += ' slide-in';
