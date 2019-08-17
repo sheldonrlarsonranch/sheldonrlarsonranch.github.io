@@ -1559,6 +1559,7 @@ footer a{
 }
 
 .cabin-overview-cabins-price p{
+    display: block;
     font-size: 18px;
 }
 
@@ -1704,8 +1705,9 @@ footer a{
 .cabin-page-navigator p{
     display: inline-block;
     font-weight: bold;
+    font-size: 14px;
     margin: 0;
-    padding: 0 10px 5px 10px;
+    padding: 0 3px 5px 10px;
 }
 
 .cabin-description-text-area{
@@ -2045,12 +2047,6 @@ fieldset {
     }
 }
 
-@media only screen and (max-width: 940px){
-    .cabin-page-navigator{
-        display: none;
-    }
-}
-
 @media only screen and (max-width: 920px){
     /* Book now page */
     .bookNow-left{
@@ -2143,6 +2139,10 @@ fieldset {
         width: 95%;
         width: calc(100% - 32px);
         margin: 16px auto 16px auto;
+    }
+
+    .cabin-page-navigator p{
+        font-size: 12px;
     }
 }
 
@@ -2982,7 +2982,87 @@ fieldset {
         float: none;
     }
 
-    /*Cabin Overview Page*/
+    /*Cabin Overview Page*/    
+    .cabin-overview-cabins-container{
+        height: 225x; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
+    }
+    
+    .cabin-overview-cabins-image{
+        width: 25%;
+        height: 100%;
+        border: solid 1px #555;
+        overflow: hidden;
+        float: left;
+    }
+    
+    .cabin-overview-cabins-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .cabin-overview-cabins-text{
+        width: 75%; /**/
+        height: 100%;
+        float: left;
+        border: solid 1px #555;
+    }
+
+    .cabin-overview-cabins-price{
+        display: block; /**/
+        position: relative; /**/
+        top: -35px; /**/
+        width: 75%; /**/
+        height: 35px; /**/
+        overflow: hidden; /**/
+        text-align: left; /**/
+        border: none; /**/
+        margin: 0 0 0 25%; /**/
+    }
+    
+    .cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
+        display: inline; /**/
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .cabin-overview-cabins-price p{
+        font-size: 16px; /**/
+        float: left; /**/
+        padding: 0 0 0 16px; /**/
+    }
+    
+    .cabin-overview-cabins-price a p{ /**/
+        display: block; /**/
+        float: right; /**/
+        padding-right: 16px; /**/
+        text-decoration: underline;
+        color: #555;
+    }
+    
+    .the-nightly-price, .the-weekly-price{
+        font-size: 16px; /**/
+        font-weight: bold;
+        color: #555;
+    }
+    
+    .center-cabins-price{
+        padding: 0; /**/
+    }
+    
+    .center-cabins-price p{
+        padding: 0 0 0 16px; /**/    
+    }
+}
+
+@media only screen and (max-width: 630px){
+    .cabin-page-navigator{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 564px){
@@ -3065,8 +3145,14 @@ fieldset {
     .attractions-overview-text{
         width: 100%; /**/
         height: auto; /**/
-        float: none; /**/
+        float: left; /**/
         border: solid 1px #555;
+        border-bottom: none; /**/
+    }
+
+    .attractions-overview-text p{
+        padding: 0 8px; /**/
+        margin: 0; /**/
     }
 
 
@@ -3078,6 +3164,7 @@ fieldset {
         text-align: left; /**/
         border: solid 1px #555;
         border-top: none; /**/
+        padding-left: 8px;
     }
 
     .attractions-overview-clickHere p{
@@ -3086,6 +3173,81 @@ fieldset {
         padding: 0 8px; /**/
         margin: 0; /**/
         font-size: 18px;
+    }
+
+    /*Cabin Overview Page*/    
+    .cabin-overview-cabins-container{
+        display: block; /**/
+        overflow: hidden; /**/
+        height: auto; /**/
+        width: 95%;
+        width: calc(100% - 32px);
+        margin: 16px auto 16px auto;
+    }
+    
+    .cabin-overview-cabins-image{
+        width: 100%; /**/
+        height: 200px; /**/
+        border: solid 1px #555;
+        overflow: hidden;
+        float: left;
+    }
+    
+    .cabin-overview-cabins-text{
+        width: 100%; /**/
+        height: auto; /**/
+        float: left;
+        border: solid 1px #555;
+        border-bottom: none;
+    }
+
+    .cabin-overview-cabins-price{
+        display: block; /**/
+        position: static; /**/
+        top: 0px; /**/
+        width: 100%; /**/
+        height: 35px; /**/
+        overflow: hidden; /**/
+        text-align: left; /**/
+        border: none; /**/
+        margin: 0; /**/
+        border: solid 1px #555; /**/
+        border-top: none; /**/
+    }
+    
+    .cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
+        display: inline; /**/
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .cabin-overview-cabins-price p{
+        font-size: 16px; /**/
+        float: left; /**/
+        padding: 0 0 0 16px; /**/
+    }
+    
+    .cabin-overview-cabins-price a p{ /**/
+        display: block; /**/
+        float: right; /**/
+        padding-right: 16px; /**/
+        text-decoration: underline;
+        color: #555;
+    }
+    
+    .the-nightly-price, .the-weekly-price{
+        font-size: 20px; /**/
+        font-weight: bold;
+        color: #555;
+    }
+    
+    .center-cabins-price{
+        padding: 0; /**/
+    }
+    
+    .center-cabins-price p{
+        padding: 0 0 0 16px; /**/    
     }
 
 }
@@ -3103,6 +3265,12 @@ fieldset {
 
     .input-grp{
         margin: 5px auto;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .cabin-overview-cabins-price a{ 
+        display: none; /**/
     }
 }
 
