@@ -1395,29 +1395,28 @@ footer a{
 }
 
 .attractions-overview-clickHere{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 20%;
     height: 100%;
     float: left;
-    text-align: center;
     border: solid 1px #555;
     border-left: none;
+    text-align: center;
 }
 
-.attractions-overview-clickHere p{
-    display: block;
+.attractions-overview-clickHere a{ 
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 30px 0 0 0;
-    font-size: 18px;
-}
-
-.attractions-overview-clickHere a{
     text-decoration: none;
     color: blue;
-    margin: 0;
-    padding: 0;
 }
 
+.attractions-overview-clickHere a p{
+    font-size: 16px;
+    margin: 0;
+    padding: 4px 0;
+}
 
 /* CABIN OVERVIEW */
 .cabin-overview-background{
@@ -1441,6 +1440,25 @@ footer a{
 .overview-container h1{
     font-family: Arial, Helvetica, sans-serif;
     padding: 16px 16px 8px 16px;
+}
+
+.overview-container h2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px 16px 8px 16px;
+}
+
+.overview-container ul{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 16px 8px 32px;
+}
+
+.overview-container ul li{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px 0 0 0;
+}
+
+.overview-container a{
+    color: blue;
 }
 
 .overview-container p{
@@ -1749,7 +1767,7 @@ footer a{
 
 .amenities{
     display: inline-block;
-    width: 250px;
+    width: 275px;
     margin: 0;
     padding: 0 16px 0 0;
 }
@@ -2041,6 +2059,64 @@ fieldset {
 .reviews-page{
     padding: 20px 10px;
 }
+
+/* Hiking Page */
+
+.hiking-overview-text h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin: 8px 8px;
+    padding: 0;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+.hiking-overview-text p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    line-height: 1.5em !important;
+    margin: 8px 8px;
+    padding: 0;
+    color: #555;
+}
+
+.hiking-overview-text a{
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+hiking-overview-text i{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+    line-height: 1.5em !important;
+}
+
+.hiking-icon{
+    width: auto;
+    color: #555;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
+.hiking-icon-left{
+    width: auto;
+    color: #555;
+    padding: 0;
+    margin: 0;
+}
+
+.hiking-difficulty{
+    font-size: 26px;
+    padding: 0;
+    margin: 0 0 0 10px;
+}
+
+.easy-hike{color: green;}
+.moderate-hike{color: blue;}
+.difficult-hike{color: black;}
 
 /* Smaller Screen Settings */
 @media only screen and (max-width: 1100px){
@@ -2334,23 +2410,33 @@ fieldset {
     }
 
     .attractions-overview-clickHere{
-        display: block;
+        display: block; /**/
         position: relative; /**/
-        top: -36px; /**/
-        width: 100%; /**/
+        top: -25px; /**/
+        width: 75%; /**/
         height: auto; /**/
         text-align: left; /**/
         border: none; /**/
-        padding: 0; /**/
-        margin: 0; /**/
+        padding: 0 0 0 24px; /**/
+        margin: 0 0 0 25%; /**/
+        float: none; /**/
     }
-
-    .attractions-overview-clickHere p{
-        display: block;
+    
+    .attractions-overview-clickHere a{
+        display: block; /**/
         font-family: Arial, Helvetica, sans-serif;
-        padding: 0 8px 0 27%; /**/
-        margin: 0 0; /**/
-        font-size: 18px;
+        text-decoration: none;
+        color: blue;
+        padding: 0;
+        margin: 35px 0; /**/
+    }
+    
+    .attractions-overview-clickHere a p{
+        display: inline-block; /**/
+        font-size: 16px; /**/
+        margin: 0 0;
+        padding: 0 5px 0 0;
+        line-height: 16px; /**/
     }
 
 }
@@ -3158,23 +3244,37 @@ fieldset {
     }
 
 
+
+/************************************************************/
     .attractions-overview-clickHere{
+        display: block; /**/
         position: static; /**/
         width: 100%; /**/
         height: auto; /**/
-        float: none; /**/
         text-align: left; /**/
         border: solid 1px #555;
         border-top: none; /**/
-        padding-left: 8px;
-    }
-
-    .attractions-overview-clickHere p{
-        display: block;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 0 8px; /**/
+        padding: 0; /**/
         margin: 0; /**/
-        font-size: 18px;
+        padding-left: 8px;
+        float: none; /**/
+    }
+    
+    .attractions-overview-clickHere a{
+        display: block; /**/
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: blue;
+        padding: 0 0 0 8px;
+        margin: 0; /**/
+    }
+    
+    .attractions-overview-clickHere a p{
+        display: inline-block; /**/
+        font-size: 16px; /**/
+        margin: 0 0;
+        padding: 8px 5px 8px 0;
+        line-height: 16px; /**/
     }
 
     /*Cabin Overview Page*/    
@@ -3319,4 +3419,4 @@ fieldset {
 
 
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
-.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}
+.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}
