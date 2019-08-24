@@ -20,8 +20,8 @@ function mobileMenuSlideIn(){
 function mobileMenuClose(){
   mobileMenu.className = 'mobile-menu';
   menuOverlay.style.display = 'none';
-  menuTrigger.style.display = 'block';
-  menuClose.style.display = 'none';
+  menuTrigger.style.display = '';
+  menuClose.style.display = '';
 }
 
 function cabinSubMenus(){

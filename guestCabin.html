@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Guest Cabin at Sheldon R. Larson Ranch</title>
+        <link rel="icon" href="images/icons/icon.png">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+
+    <body id="main-cabin-body">
+        <!-- Header -->
+        <nav style="background-color: rgba(255,255,255,1)">
+            <div class="logo-title-container">
+                <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="bookNow.html">Book Now</a></li>
+                <li><a href="overview.html">About Us <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </li>
+                <li><a href="cabinOverview.html">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul> 
+                        <li><a href="mainCabin.html">Main Cabin</a></li>
+                        <li><a href="guestCabin.html">Guest Cabin</a></li>
+                        <li><a href="otherEvents.html">Other Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="availability.html">Availability</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
+                <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Header -->
+        <aside id="mobile-menu" class="mobile-menu">
+            <div class="menu-inner">
+                <ul class="menu-pages">
+                    <li class="menu-page-link"><a href="index.html">Home</a></li>
+                    <li class="menu-page-link"><a href="bookNow.html">Book Now</a></li>
+                    <li class="menu-page-link"><a id="about-us">About Us <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                        <ul id="about-us-sub-menu-pages">
+                            <li><a href="overview.html">Overview</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                        <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="mainCabin.html">Main Cabin</a></li>
+                            <li><a href="guestCabin.html">Guest Cabin</a></li>
+                            <li><a href="otherEvents.html">Other Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-page-link"><a href="gallery.html">Gallery</a></li>
+                    <li class="menu-page-link"><a href="availability.html">Availability</a></li>
+                    <li class="menu-page-link"><a href="attractions.html">Attractions</a></li>
+                    <li class="menu-page-link"><a href="map.html">Map</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="overlay"></div>
+
+        <div class="background-image">
+            <img src="images/background-image.jpg" alt="">
+        </div>
+
+        <div class="overview-container">
+            <h1>Guest Cabin</h1>
+            <p>A great getaway for a small family in this Country Cabin rental!</p>
+            <div class="cabin-overview-icon-container">
+                <p><i class="fas fa-user-friends cabin-overview-icon cabin-overview-icon-right"></i> 4</p> 
+                <p><i class="fas fa-bed cabin-overview-icon cabin-overview-icon-right"></i> 2</p>
+                <p><img src="images/icons/fridge.svg" height="16" width="25" alt="fridge icon" class="fridge-icon2"/> Full Kitchen</p>   
+                <p><i class="fas fa-car cabin-overview-icon cabin-overview-icon-right"></i> Parking</p> 
+                <p><i class="fas fa-paw cabin-overview-icon cabin-overview-icon-right"></i> Pets*</p>
+            </div>      
+
+            
+            <div class="cycle-slideshow cabin-image-carousel-container" 
+                data-cycle-timeout="0" 
+                data-cycle-pager-template="<a class='cabin-image-carousel-thumbnails' href='#'><img src='{{src}}' width='100' height='50'></a>"
+                data-cycle-swipe=true>    
+                <span class="cycle-pager cabin-image-carousel-pager"></span>
+                <span class="cycle-prev cabin-image-carousel-prev">&#9001;</span>
+                <span class="cycle-next cabin-image-carousel-next">&#9002;</span>
+
+                <div class="cycle-caption cabin-image-caption"></div>
+
+                <img class="cabin-image-carousel-img" src="images/home-1.jpg" alt="">
+                <img class="cabin-image-carousel-img" src="images/home-2.jpg" alt="">
+                <img class="cabin-image-carousel-img" src="images/home-3.jpg" alt="">
+                <img class="cabin-image-carousel-img" src="images/home-4.jpg" alt="">
+            </div>
+
+
+
+            <div class="cabin-page-navigator">
+                <a href="#main-cabin-description"><p>Description</p></a>
+                <a href="#main-cabin-theSpace"><p>The Space</p></a>
+                <a href="#main-cabin-guestAccess"><p>Guest Access</p></a>
+                <a href="#main-cabin-location"><p>Location</p></a>
+                <a href="#main-cabin-amenities"><p>Amenities</p></a>
+                <a href="#main-cabin-information"><p>Information</p></a>
+                <a href="#main-cabin-rates"><p>Rates</p></a>
+            </div>
+
+            <div class="cabin-description-text-area">
+                <h2 id="main-cabin-description">Description</h2>
+                <p>The Sheldon R. Larson Ranch is located in the heart of the Sanpete Valley, four miles west of Ephraim. This working ranch is located minutes from the famous Arapeen trail system, with world-class ATVing, snowmobiling, hiking, and rock climbing. Great for both summer and winter enthusiasts looking for a classic and fun cabin experience with easy access to world-class outdoors!</p>
+                <h2 id="main-cabin-theSpace">The Space</h2>
+                <p>The guest cabin has a studio style setup on the ground floor. The ground floor has a queen-sized bed, a full kitchen, and living room. There is also a large loft area, accessible by ladder stairs, which overlooks the living room and has another queen bed, balcony access, and plenty of room! The shower and bathroom are located about 25 feet from the guest cabin and the walk to the bathroom is covered! We know this is less desirable for some people but we've found that most people don't mind and associate it with just a walk down the hall to the bathroom!</p>
+                <p>Enjoy quiet peaceful nights by the fire after a day of four-wheeling, snowmobiling, hiking, fishing, horseback riding or sightseeing in the nearby national forest. Enjoy easy access to the many ATV trails in the Arapeen trail system accessible from your doorstep.</p>
+                <p>Conveniently located near Ephraim and Manti, it is the gateway to the Manti-La Sal National Forest and other local attractions for both outdoor adventurists and those who want to enjoy the many quaint historical sites the Sanpete Valley has to offer.</p>
+                <p>The spacious accommodations of the ranch offer plenty of parking for all the toys (RV, Campers, toy haulers, etc). There is a beautiful lawn for tent camping and large groups. Horse corrals are available for boarding if desired. Both are available with prior arrangement and additional camping/boarding fees.</p>
+                <h2 id="main-cabin-guestAccess">Guest Access</h2>
+                <p>You will have access to the entire cabin and the surrounding area. There is a fire pit, lawn area, and horseshoe pit available for all guests. We are on a working ranch, so there are live animals in the corrals.</p>
+                <h2 id="main-cabin-location">Location</h2>
+                <h4>The Neighborhood</h4>
+                <p>These cabins are located outside a small town and are very quiet and secluded with mountains on the east and west. We are located on a working ranch so there are farm animals on neighboring property.</p>
+                <h4>Getting Around</h4>
+                <p>There is plenty of parking for your cars, trailers, ATVs, snowmobiles, etc. Ephraim is an ATV friendly town, meaning you can also ride your ATVs through the city!</p>
+                <h2 id="main-cabin-amenities">Amenities</h2>
+                <div class="amenities-container">
+                    <p class="amenities">- A/C</p>
+                    <p class="amenities">- Fridge/Freezer</p>
+                    <p class="amenities">- Oven/Stove</p>
+                    <p class="amenities">- Dishwasher</p>
+                    <p class="amenities">- Microwave</p>
+                    <p class="amenities">- Kitchenware</p>
+                    <p class="amenities">- Microwave</p>
+                    <p class="amenities">- Coffee Maker</p>
+                    <p class="amenities">- Gas BBQ Grill</p>
+                    <p class="amenities">- Master Bedroom: 1 Queen</p>
+                    <p class="amenities">- Loft: 1 Queen</p>
+                    <p class="amenities">- Linens</p>
+                    <p class="amenities">- Crib</p>
+                    <p class="amenities">- Shower</p>
+                    <p class="amenities">- Satellite TV</p>
+                    <p class="amenities">- Balcony</p>
+                    <p class="amenities">- Outdoor Firepit/Wood</p>
+                    <p class="amenities">- Horseshoe Pit</p>
+                    <p class="amenities">- RV/Vehicle Parking</p>
+                    <p class="amenities">- Courtyard Seating Area</p>
+                    <p class="amenities">- Wheelchair Accessible Entrance</p>
+                    <p class="amenities">- Pet Friendly Policy</p>
+                </div>
+                <h2 id="main-cabin-information">Information</h2>
+                <h4>Check-In/Check-Out</h4>
+                <p>You may check-in anytime after 3:00pm on the day of your first stay. We ask that you are checked-out by 11:00am after your last night so that we can clean the cabins before our next guests arrive!</p>
+                <p>Upon check-in we will give you a key to the cabin. Once you are ready to check-out simply leave the key on the dining room table and our cleaners will grab the key once you've checked out!</p>
+                <h4>Refund/Payment</h4>
+                <p>25% of payment is required to reserve your booking. This is a non-refundable security and cleaning deposit. The other 75% is due upon arrival at the cabins.</p>
+                <h4>Pet Policy</h4>
+                <p>We do allow pets at our cabins! There is a large lawn and courtyard area for the pets to run free. There is also a fenced in area on the soutch side of the main cabin that the dogs may use. We do require that you clean up after your pets.</p>
+                <p>Your pets may stay in the cabins but require that pets are not allowed on any furniture and may not "rough-house" inside the cabins. At night we do ask that your pets are placed in a kennel while you sleep. Please help us by abiding by this policy so that other guests can enjoy our cabins. These cabins have been in our family for over 100 years and we try everything we can to ensure the history and experience can be preserved for all our guests to enjoy!</p>
+                <p>There is an additional $20/night charge added for each pet. This helps us cover the additional cleaning required so that our cabins may be clean for the next guests!</p>
+                <h4>Damage Policy</h4>
+                <p>We don't want any part of our timeless cabins to be damaged and we know you don't want or intend to damage our property. That being said, we know accidents and damages do happen. You will be required to pay for any intentional damage or defacing of property caused by any member (or pets) in your party. For other damages of property, we will work with you on a case by case basis. Since our cabins have been in the family for over 100 years, there are pieces in our cabin that cannot be replaced. But of course, we know you'll do your best to treat it as your own!</p>
+                <h4>Large Groups</h4>
+                <p>We do allow group events at our cabins. If you have a large group and want to rent our cabins we do ask that you contact us directly at sheldonrlarsonranch@gmail.com or by phone at (435)340-0075 to book. For large groups you must rent out both the main and guest cabin. There is an additional $5/guest for each guest above our cabin capacity of 10. There is a large lawn area that we do allow groups to pitch tents to accomodate this additional capacity. There is also extra parking available for RVs and campers if desired.</p>
+                <h2 id="main-cabin-rates">Rates</h2>
+                <table class="rates-table">
+                    <tr>
+                        <th>Cabin</th>
+                        <th>Nightly Rate</th>
+                        <th>Weekly Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Main Cabin</td>
+                        <td>$129 /night</td>
+                        <td>$775 /week</td>
+                    </tr>
+                    <tr>
+                        <td>Guest Cabin</td>
+                        <td>$99 /night</td>
+                        <td>$600 /week</td>
+                    </tr>
+                    <tr>
+                        <td>Main/Guest Cabins Combined</td>
+                        <td>$200 /night</td>
+                        <td>$1200 /week</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+
+
+        <footer style="background-color: rgba(255,255,255,1)">
+            <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.facebook.com/sheldonrlarsonranch/" target="_blank"><img src="images/icons/facebook.svg" height="20" width="20" alt="link to our facebook page"/></a>
+            <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.instagram.com/sheldonrlarsonranch/" target="_blank"><img src="images/icons/instagram.svg" height="20" width="20" alt="link to our instagram page"/></a>
+            <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.airbnb.com/rooms/6987200?source_impression_id=p3_1561644451_CppAMA6DbxaNfKE2&s=hCtNNbnM" target="_blank"><img src="images/icons/airbnb.svg" height="20" width="20" alt="link to our airbnb page"/></a>
+        </footer>
+
+        <!--JQuery and JavaScript Declarations-->
+        <script src="js/jquery.min.js"></script>
+        <script src='js/main.js'></script>
+        <script src="js/jquery.cycle2.min.js"></script>
+
+    </body>
+</html>

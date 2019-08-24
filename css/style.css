@@ -19,16 +19,20 @@
 
 :root{
     /* Homepage Booking Form */
-    --home-form-bg: transparent;
     --home-form-btn-bg: rgba(255,255,255,0.6);
     --home-form-text: #000;
-    --home-form-shdw: none;
     --home-form-dash-text: #fff;
     --home-form-dash-shdw: 1px 1px #000;
-    --home-form-shdw-hov: none;
-    --home-form-btn-hov: rgba(0,0,0,0.6);
+    --home-form-btn-hov: #55555599;
     --home-form-text-hov: #fff;
-    --home-form-brdr: none;
+
+    /*Default font*/
+    --default-font-family: Arial, Helvetica, sans-serif;
+    --secondary-font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+    /*Other Colors*/
+    --accent-color: #FFC107;
+    --other-accent: #35b5e3;
 }
 
 
@@ -109,12 +113,6 @@ nav{
     top: 50%;
     transform: translateY(-50%);
 }
-
-nav p a:hover{
-    border-bottom: solid 2px slategray;
-    text-decoration: none;
-    color: #000;
-}
  
 nav ul{
     float: right;
@@ -129,7 +127,7 @@ nav ul li{
 }
 
 nav ul li a{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-weight: bold;
     color: #000;
     font-size: 14px;
@@ -177,7 +175,7 @@ nav ul li ul li a{
     display: block;
     text-decoration: none;
     color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 14px;
 }
 
@@ -230,7 +228,7 @@ nav ul li ul li a:hover{
 
 .menu-page-link a{
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     color: #000;
     font-size: 24px;
     cursor: pointer;
@@ -244,7 +242,7 @@ nav ul li ul li a:hover{
     list-style-type: none;
     display: none;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     color: #000;
     font-size: 24px;
     cursor: pointer;
@@ -277,8 +275,8 @@ nav ul li ul li a:hover{
     transform: translate(-50%, -50%);
     z-index: 11;
     max-width: 800px;    
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--home-form-bg);
+    font-family: var(--default-font-family);
+    background-color: none;
     display: flex;
     flex-direction: row;
     flex: 1 1 0;
@@ -296,12 +294,11 @@ input::placeholder{
 }
 
 .custom-select{
+    font-family: var(--default-font-family);
     color: var(--home-form-text);
-    text-shadow: var(--home-form-shdw);
     font-size: 16px;
-    box-shadow: var(--home-form-shdw);
     border-radius: 5px;
-    border: solid 1px var(--home-form-brdr);
+    border: none;
     background: var(--home-form-btn-bg); 
     height: 30px;
     padding-left: 5px;
@@ -315,28 +312,26 @@ input::placeholder{
 }
 
 .form-control{
+    font-family: var(--default-font-family);
     padding-left: 8px;
     font-size: 16px;
-    text-shadow: var(--home-form-shdw);
     border-radius: 5px;
     color: var(--home-form-text);
     background-color: var(--home-form-btn-bg);
-    box-shadow: var(--home-form-shdw);
+    border: none;
     height: 30px;
     width: 190px;
-    border: solid 1px var(--home-form-brdr);
     font-weight: bold;
     cursor: pointer;
 }
 
 .submit{
+    font-family: var(--default-font-family);
     height: 30px;
     min-width: 105px;
     font-size: 16px;
-    text-shadow: var(--home-form-shdw);
-    border: 1px solid var(--home-form-brdr);
-    box-shadow: var(--home-form-shdw);
     border-radius: 5px;
+    border: none;
     background: var(--home-form-btn-bg);
     color: var(--home-form-text);
     padding: 0px 10px;
@@ -344,48 +339,10 @@ input::placeholder{
     cursor: pointer;
 }
 
-.submit:hover{
+.submit:hover, .custom-select:hover, .form-control:hover{
     background: var(--home-form-btn-hov);
     color: var(--home-form-text-hov);
-    text-shadow: var(--home-form-shdw-hov);
     transition: 0.5s;
-}
-
-/* Hides background images for other aspect ratios*/
-.rslides6-5, .rslides4-5, .rslides1-2{display: none;}
-/*Background Image Slider*/
-.rslides8-5 {
-    display: block;
-    position: relative;
-    list-style: none;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-}
-
-.rslides8-5 li {
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    display: none;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
-
-.rslides8-5 li:first-child {
-    position: relative;
-    display: block;
-    float: left;
-}
-
-.rslides8-5 img {
-    display: block;
-    height: auto;
-    float: left;
-    width: 100%;
-    border: 0;
 }
 
 /* Footer */
@@ -486,6 +443,7 @@ footer a{
 }
 
 #map-explanation p{
+    font-family: var(--default-font-family);
     line-height: 24px;
     font-size: 18px;
     margin: 0 0 16px 0;
@@ -530,14 +488,14 @@ footer a{
 }
 
 #step-one-left p, #step-two-left p, #step-three-left p, #step-four-left p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 16px;
     margin-top: 10px;
     color: #555;
 }
 
 #step-one-left p{
-    color: #35b5e3;
+    color: var(--other-accent);
 }
 
 #step-one-check, #step-two-check, #step-three-check, #step-four-check, #step-one-circle, #step-two-circle, #step-three-circle, #step-four-circle{
@@ -546,7 +504,7 @@ footer a{
 }
 
 #step-one-check{
-    color: #35b5e3;
+    color: var(--other-accent);
 }
 
 #step-one-circle, #step-two-check, #step-three-check, #step-four-check{
@@ -558,8 +516,9 @@ footer a{
     width: 45vw;
     height: 100%;
     border-top: solid 1px #ccc;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     margin-right: 8px;
+    padding-bottom: 16px;
     overflow: hidden;
 }
 
@@ -573,7 +532,7 @@ footer a{
 }
 
 #step-one-done p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 14px;
     color: #555;
     padding-left: 8px;
@@ -723,6 +682,7 @@ footer a{
 #continue-btn-1:hover{
     background-color: #ccc;
     color: #555;
+    transition: 0.5s;
 }
 
 /* Step Two Completed */
@@ -738,7 +698,7 @@ footer a{
 }
 
 #step-two-done p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 14px;
     color: #555;
     margin-left: 8px;
@@ -879,6 +839,7 @@ footer a{
 #continue-btn-2:hover, #previous-btn-2:hover{
     background-color: #ccc;
     color: #555;
+    transition: 0.5s;
 }
 
 /* Step Three Completed */
@@ -893,7 +854,7 @@ footer a{
 }
 
 #step-three-done p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 14px;
     color: #555;
     margin-left: 34px;
@@ -971,6 +932,7 @@ footer a{
 #continue-btn-3:hover, #previous-btn-3:hover{
     background-color: #ccc;
     color: #555;
+    transition: 0.5s;
 }
 
 /* Step Four Completed */
@@ -992,7 +954,7 @@ footer a{
 
 .step-four-middle{
     border-bottom: 1px solid #ccc;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     color: #555;
     padding-left: 8px;
     background-color:#f7f7f7;
@@ -1049,6 +1011,7 @@ footer a{
 #continue-btn-4:hover, #previous-btn-4:hover{
     background-color: #ccc;
     color: #555;
+    transition: 0.5s;
 }
 
 #formspree{
@@ -1113,18 +1076,21 @@ footer a{
     width: 85%;
     animation: overviewTextAnimation ease 2s;
     animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;  
 }
 
-
 .overview-text-container p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.5vw;
-    padding: 0 10%;
+    padding: 0 2%;
+    margin: 0 8%;
+    background-image: -webkit-linear-gradient(bottom, var(--accent-color) 80%, rgba(0,0,0,0) 20%);
+    background-size: 2px 100%;
+    background-repeat: no-repeat;
 }
 
 .overview-text-container h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 2vw;
     padding: 0 10%;
     font-weight: bold;
@@ -1132,7 +1098,7 @@ footer a{
 }
 
 .overview-text-container h6{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 3vw;
     padding: 0 10%;
     font-weight: bold;
@@ -1167,6 +1133,7 @@ footer a{
     animation: fadeInAnimation ease 4s;
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
+    z-index: 100;
 }
 
 .overview-page{
@@ -1284,7 +1251,7 @@ footer a{
     position: relative;
     top: 70%;
     line-height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     color: #fff;
     text-shadow: 2px 2px #000;
     font-size: 2em;
@@ -1309,7 +1276,7 @@ footer a{
 }
 
 .overview-overlay-underline{
-    border-bottom: 2px solid gold;
+    border-bottom: 2px solid var(--accent-color);
     margin: 16px 80% 0 16px;
 }
   
@@ -1369,7 +1336,7 @@ footer a{
 }
 
 .attractions-overview-text h3{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.5em;
     margin: 8px 8px;
     padding: 0;
@@ -1379,7 +1346,7 @@ footer a{
 }
 
 .attractions-overview-text p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.0em;
     line-height: 1.5em !important;
     margin: 8px 0;
@@ -1407,7 +1374,7 @@ footer a{
 }
 
 .attractions-overview-clickHere a{ 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     text-decoration: none;
     color: blue;
 }
@@ -1419,15 +1386,6 @@ footer a{
 }
 
 /* CABIN OVERVIEW */
-.cabin-overview-background{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
 .overview-container{
     background-color: #fff;
     width: 70vw;
@@ -1438,22 +1396,22 @@ footer a{
 }
 
 .overview-container h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     padding: 16px 16px 8px 16px;
 }
 
 .overview-container h2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     padding: 16px 16px 8px 16px;
 }
 
 .overview-container ul{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     padding: 0px 16px 8px 32px;
 }
 
 .overview-container ul li{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     padding: 4px 0 0 0;
 }
 
@@ -1463,7 +1421,7 @@ footer a{
 
 .overview-container p{
     padding: 8px 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1em;
     line-height: 2em;
 }
@@ -1513,7 +1471,7 @@ footer a{
 }
 
 .cabin-overview-cabins-text h3{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.5em;
     margin: 8px 8px;
     text-transform: uppercase;
@@ -1522,18 +1480,11 @@ footer a{
 }
 
 .cabin-overview-cabins-text p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1em;
     margin: 8px 8px;
     padding: 0;
     line-height: 18px;
-}
-
-.cabin-overview-cabins-text span{
-    font-weight: bold;
-    color: #555;
-    padding: 0;
-    margin: 0;
 }
 
 .cabin-overview-cabins-text a{
@@ -1557,11 +1508,6 @@ footer a{
     padding: 0;
 }
 
-.fridge-icon2{
-    margin: 0;
-    padding: 0;
-}
-
 .cabin-overview-cabins-price{
     width: 24%;
     height: 100%;
@@ -1573,7 +1519,7 @@ footer a{
 
 .cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
     display: inline;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     padding: 0;
     margin: 0;
 }
@@ -1586,6 +1532,11 @@ footer a{
 .cabin-overview-cabins-price a{
     text-decoration: underline;
     color: #555;
+}
+
+.cabin-overview-cabins-price a:hover{
+    color: var(--other-accent);
+    transition: 0.5s;
 }
 
 .the-nightly-price, .the-weekly-price{
@@ -1682,15 +1633,6 @@ footer a{
     background-color: rgba(0,0,0,0.7);
 }
 
-.cabin-image-carousel-pager a{
-    display: inline-block;
-    margin: 0 3px;
-    padding-top: 2px;
-    opacity: 0.5;
-}
-
-.cycle-pager .cycle-pager-active { opacity: 1;}
-
 .cabin-image-caption{
     display: block;
     position: absolute;
@@ -1735,7 +1677,7 @@ footer a{
     margin: 0 16px;
     padding: 0;
     color: #555;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
 }
 
 .cabin-description-text-area h2{
@@ -1772,14 +1714,8 @@ footer a{
     padding: 0 16px 0 0;
 }
 
-.amenities p{
-    padding: 0 16px 0 0;
-    margin: 0;
-    word-wrap: break-word;
-}
-
 .rates-table{
-    font-family: arial, sans-serif;
+    font-family: var(--default-font-family);
     border-collapse: collapse;
     width: 100%;
 }
@@ -1797,47 +1733,10 @@ footer a{
     background-color: #fff;
   }
 
-.cabin-main-page-btn-container{
-    display: flex;
-    flex: 1 1 0;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.cabin-main-page-btn{
-    width: 180px;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-}
-
-.cabin-main-page-btn p{
-    margin: 24px 16px 0 0;
-    padding: 0 10px;
-    height: auto;
-    line-height: 35px;
-    background-color: #efefef;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
-    color: #555;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.cabin-reviews{
-    padding: 20px 10px;
-    max-height: 500px;
-    overflow: scroll;
-}
-
 /* CONTACT US PAGE */
 .contact-title{
     position: absolute;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: var(--secondary-font-family);
     color: #fff;
     text-align: center;
     top: 0;
@@ -1888,6 +1787,7 @@ footer a{
 }
 
 .contact-information{
+    font-family: var(--default-font-family);
     display: block;
     position: absolute;
     width: 50%;
@@ -1939,121 +1839,6 @@ footer a{
 .contact-information a{
     text-decoration: none;
 }
-/*
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact textarea,
-#contact button[type="submit"] {
-    font: 400 16px/20px "Roboto", Helvetica, Arial, sans-serif;
-}
-
-#contact {
-    min-height: calc(100vh - 60px); 
-    padding: 25px;
-}
-
-#contact h3 {
-    display: block;
-    font-size: 30px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    width: 50%;
-}
-
-#contact h4 {
-    margin: 5px 0 15px;
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
-    width: 50%;
-}
-
-fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    padding: 0;
-    width: 100%;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact textarea {
-    width: 50%;
-    border: 1px solid #ccc;
-    background: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
-}
-
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact textarea:hover {
-    -webkit-transition: border-color 0.3s ease-in-out;
-    -moz-transition: border-color 0.3s ease-in-out;
-    transition: border-color 0.3s ease-in-out;
-    border: 1px solid #aaa;
-}
-
-#contact textarea {
-    height: 100px;
-    width: 50%;
-    resize: vertical;
-}
-
-#contact button[type="submit"] {
-    cursor: pointer;
-    width: 50%;
-    border: none;
-    background: #4CAF50;
-    color: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
-    font-size: 15px;
-}
-
-#contact button[type="submit"]:hover {
-    background: #43A047;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-#contact input:focus,
-#contact textarea:focus {
-    outline: 0;
-    border: 1px solid #aaa;
-}
-
-#contact input[type="text"]::placeholder,
-#contact input[type="email"]::placeholder,
-#contact input[type="tel"]::placeholder,
-#contact textarea::placeholder {
-    color: #888;
-}
-
-::-webkit-input-placeholder {
-    color: #888;
-}
-
-:-moz-placeholder {
-    color: #888;
-}
-
-::-moz-placeholder {
-    color: #888;
-}
-
-:-ms-input-placeholder {
-    color: #888;
-}
-*/
 
 /* Reviews Page */
 .reviews-page{
@@ -2063,7 +1848,7 @@ fieldset {
 /* Hiking Page */
 
 .hiking-overview-text h3{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.5em;
     margin: 8px 8px;
     padding: 0;
@@ -2073,7 +1858,7 @@ fieldset {
 }
 
 .hiking-overview-text p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--default-font-family);
     font-size: 1.0em;
     line-height: 1.5em !important;
     margin: 8px 8px;
@@ -2086,12 +1871,6 @@ fieldset {
     color: black;
     padding: 0;
     margin: 0;
-}
-
-hiking-overview-text i{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.0em;
-    line-height: 1.5em !important;
 }
 
 .hiking-icon{
@@ -2148,39 +1927,6 @@ hiking-overview-text i{
         display: none;
     }
     
-    /* Contact Us Page */
-    /*
-    #contact {
-        display: block;
-    }
-    
-    #contact h3 {
-        width: 100%;
-    }
-    
-    #contact h4 {
-        width: 100%;
-    }
-    
-    fieldset {
-        width: 100%;
-    }
-    
-    #contact input[type="text"],
-    #contact input[type="email"],
-    #contact input[type="tel"],
-    #contact textarea {
-        width: 100%;
-    }
-    
-    #contact textarea {
-        width: 100%;
-    }
-    
-    #contact button[type="submit"] {
-        width: 100%;
-    }
-    */
     .contact-form-container{
         width: 100%;
     }
@@ -2271,16 +2017,17 @@ hiking-overview-text i{
         animation-fill-mode: forwards;
     }
     
-    
     .overview-text-container p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 18px; /**/
         line-height: 24px; /**/
         padding: 0 0; /**/
+        margin: 0 0; /**/
+        background-image: none; /**/
     }
     
     .overview-text-container h1{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 24px; /**/
         padding: 0 0; /**/
         font-weight: bold;
@@ -2288,7 +2035,7 @@ hiking-overview-text i{
     }
     
     .overview-text-container h6{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         padding: 0 0; /**/
         font-size: 28px; /**/
         line-height: 36px; /**/
@@ -2366,7 +2113,7 @@ hiking-overview-text i{
     .overview-overlay p{
         position: static; /**/
         line-height: 40px; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         color: #fff;
         text-shadow: 2px 2px #000;
         font-size: 32px; /**/
@@ -2374,7 +2121,7 @@ hiking-overview-text i{
     }
     
     .overview-overlay-underline{
-        border-bottom: 2px solid gold;
+        border-bottom: 2px solid var(--accent-color);
         margin: 10px 80% 0 16px; /**/
     }
           
@@ -2424,7 +2171,7 @@ hiking-overview-text i{
     
     .attractions-overview-clickHere a{
         display: block; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         text-decoration: none;
         color: blue;
         padding: 0;
@@ -2504,7 +2251,7 @@ hiking-overview-text i{
     }
     
     #step-one-left p, #step-two-left p, #step-three-left p, #step-four-left p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 16px;
         margin-top: 10px;
         color: #555;
@@ -2533,7 +2280,7 @@ hiking-overview-text i{
         width: 96vw; /**/
         height: 100%;
         border-top: none; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         margin: 0 auto;
         overflow: hidden;
     }
@@ -2548,7 +2295,7 @@ hiking-overview-text i{
     }
     
     #step-one-done p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 14px;
         color: #555;
         padding-left: 8px;
@@ -2700,6 +2447,7 @@ hiking-overview-text i{
     #continue-btn-1:hover{
         background-color: #ccc;
         color: #555;
+        transition: 0.5s;
     }
     
     /* Step Two Completed */
@@ -2713,7 +2461,7 @@ hiking-overview-text i{
     }
     
     #step-two-done p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 14px;
         color: #555;
         margin-left: 8px;
@@ -2860,6 +2608,7 @@ hiking-overview-text i{
     #continue-btn-2:hover, #previous-btn-2:hover{
         background-color: #ccc;
         color: #555;
+        transition: 0.5s;
     }
     
     /* Step Three Completed */
@@ -2873,7 +2622,7 @@ hiking-overview-text i{
     }
     
     #step-three-done p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         font-size: 14px;
         color: #555;
         margin-left: 34px;
@@ -2949,6 +2698,7 @@ hiking-overview-text i{
     #continue-btn-3:hover, #previous-btn-3:hover{
         background-color: #ccc;
         color: #555;
+        transition: 0.5s;
     }
     
     /* Step Four Completed */
@@ -2970,7 +2720,7 @@ hiking-overview-text i{
     
     .step-four-middle{
         border: 1px solid #ccc; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         color: #555;
         padding-left: 8px;
         background-color:#f7f7f7;
@@ -3027,6 +2777,7 @@ hiking-overview-text i{
     #continue-btn-4:hover, #previous-btn-4:hover{
         background-color: #ccc;
         color: #555;
+        transition: 0.5s;
     }
     
     #formspree{
@@ -3113,7 +2864,7 @@ hiking-overview-text i{
     
     .cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
         display: inline; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         padding: 0;
         margin: 0;
     }
@@ -3262,7 +3013,7 @@ hiking-overview-text i{
     
     .attractions-overview-clickHere a{
         display: block; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         text-decoration: none;
         color: blue;
         padding: 0 0 0 8px;
@@ -3319,7 +3070,7 @@ hiking-overview-text i{
     
     .cabin-overview-cabins-price h3, .cabin-overview-cabins-price p{
         display: inline; /**/
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--default-font-family);
         padding: 0;
         margin: 0;
     }
@@ -3355,10 +3106,7 @@ hiking-overview-text i{
 }
 
 @media only screen and (max-width: 485px){
-    /* Header */
-    nav p a{
-        font-size: 18px;
-    }
+
     /* Home Page */
     .booking-form{
         flex-direction: column;
@@ -3419,4 +3167,4 @@ hiking-overview-text i{
 
 
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
-.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands"}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family:"Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}
+.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}
