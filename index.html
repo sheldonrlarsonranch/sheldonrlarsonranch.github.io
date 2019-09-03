@@ -11,7 +11,7 @@
 
     <body id="homepage"> 
         <!-- Header -->
-        <nav>
+        <nav class="opaque-header">
             <div class="logo-title-container">
                 <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
             </div>
@@ -33,7 +33,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="atv.html">ATV</a></li>
+                        <li><a href="hiking.html">Hiking</a></li>
+                        <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                        <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                        <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="sightseeing.html">Sightseeing</a></li>
+                        <li><a href="otherAttractions.html">Other</a></li>
+                    </ul>
+                </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -55,6 +66,7 @@
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
                         <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li>
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -71,6 +83,7 @@
 
         <!--Booking Form-->
         <form class="booking-form" id="booking-form" action="bookNow.html" method="GET">
+            <!--Drop Down Cabin Select Menu-->
             <div class="input-grp">
                 <select id="cabin-select" class="custom-select" name="selectCabin">
                     <option value="main-cabin">Main Cabin</option>
@@ -78,9 +91,11 @@
                     <option value="both-cabins">Both Cabins</option>
                 </select>
             </div>
+            <!--Calendar Date Selection-->
             <div class="input-grp">
                 <input id="date-selector" class="form-control select-date" type="text" name="daterange" placeholder="Select Dates on Book Now Form" readonly="true"/>
             </div>
+            <!--Submit/Book Now Button-->
             <div class="input-grp">
                 <button type="submit" class="btn btn-primary submit" id="book-now-2">Book Now!</button>
             </div>
@@ -102,7 +117,6 @@
             <a title="Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY" href="https://www.airbnb.com/rooms/6987200?source_impression_id=p3_1561644451_CppAMA6DbxaNfKE2&s=hCtNNbnM" target="_blank"><img src="images/icons/airbnb.svg" height="20" width="20" alt="link to our airbnb page"/></a>
         </footer>
         <!--<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"                 title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"                 title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
-
 
         <!--For the homepage calendar-->
         <script src="js/jquery.min.js"></script>

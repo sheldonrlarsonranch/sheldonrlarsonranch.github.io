@@ -10,7 +10,7 @@
 
     <body>
          <!-- Header -->
-         <nav style="background-color: rgba(255,255,255,1)">
+         <nav class="solid-header">
             <div class="logo-title-container">
                 <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
             </div>
@@ -32,7 +32,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="atv.html">ATV</a></li>
+                        <li><a href="hiking.html">Hiking</a></li>
+                        <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                        <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                        <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="sightseeing.html">Sightseeing</a></li>
+                        <li><a href="otherAttractions.html">Other</a></li>
+                    </ul>
+                </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -54,6 +65,7 @@
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
                         <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li>
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -106,6 +118,21 @@
                 </div>
             </div>
 
+             <!--Orangutan Wall-->
+             <div class="attractions-overview-container">
+                <div class="attractions-overview-image">
+                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><img src="images/orangutan-wall_1.jpg" alt=""></a>
+                </div>
+                <div class="attractions-overview-text hiking-overview-text">
+                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><h3>Orangutan Wall</h3></a>
+                    <p><i class="fas fa-mountain hiking-icon-left"></i> 12+ Climbs<span class="hiking-difficulty moderate-hike">&#9632;</span> Moderate<i class="fas fa-star hiking-icon"></i> 5.7~5.10</p>
+                    <p>Orangutan Wall consists of some of the longest routes in Maple Canyon with the unique cobblestone climbing. Combine this with neighboring "Engagement Alcove" for a full day of excellent climbing!</p>
+                </div>
+                <div class="attractions-overview-clickHere">
+                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
+                </div>
+            </div>
+
             <!--Walls of Liberation-->
             <div class="attractions-overview-container">
                 <div class="attractions-overview-image">
@@ -118,21 +145,6 @@
                 </div>
                 <div class="attractions-overview-clickHere">
                     <a href="https://www.mountainproject.com/area/107679961/walls-of-liberation" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
-                </div>
-            </div>
-
-            <!--Orangutan Wall-->
-            <div class="attractions-overview-container">
-                <div class="attractions-overview-image">
-                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><img src="images/orangutan-wall_1.jpg" alt=""></a>
-                </div>
-                <div class="attractions-overview-text hiking-overview-text">
-                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><h3>Orangutan Wall</h3></a>
-                    <p><i class="fas fa-mountain hiking-icon-left"></i> 12+ Climbs<span class="hiking-difficulty moderate-hike">&#9632;</span> Moderate<i class="fas fa-star hiking-icon"></i> 5.7~5.10</p>
-                    <p>Orangutan Wall consists of some of the longest routes in Maple Canyon with the unique cobblestone climbing. Combine this with neighboring "Engagement Alcove" for a full day of excellent climbing!</p>
-                </div>
-                <div class="attractions-overview-clickHere">
-                    <a href="https://www.mountainproject.com/area/105841685/orangutan-wall" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
                 </div>
             </div>
 
@@ -155,6 +167,7 @@
             <ul>
                 <li><a href="https://www.mountainproject.com/area/105739298/maple-canyon" target="_blank">Mountain Project</a></li>
                 <li><a href="https://www.thecrag.com/climbing/united-states/maple-canyon" target="_blank">The Crag</a></li>
+                <li><a href="https://www.fs.usda.gov/activity/mantilasal/recreation/climbing/?recid=72816&actid=37" target="_blank">Forest Service</li>
                 <li><a href="http://www.rockclimbing.com/routes/North_America/United_States/Utah/Central_Utah/Maple_Canyon/" target="_blank">Rock Climbing</a></li>
                 <li><a href="http://sanpete.com/pages/climb" target="_blank">Sanpete.com</a></li>
                 <li><a href="https://www.climbsmith.com/blog/maple-canyon-climbing-trip/" target="_blank">Climb Smith</a></li>

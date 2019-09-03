@@ -166,6 +166,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       stepOneLeft.style.borderLeft = 'solid 1px #ccc';
       stepOneLeft.style.borderTop = 'solid 1px #ccc';
       stepOneLeft.style.borderBottom = 'solid 1px #ccc';
+      stepOneLeft.style.borderRight = 'none';
       document.getElementById("step-one-p").style.color = '#35b5e3';
       document.getElementById("step-one-check").style.color = '#35b5e3';
   
@@ -191,7 +192,6 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       stepOneLeft.style.backgroundColor = '#fff';
       stepOneLeft.style.border = 'solid 1px #ccc';
       document.getElementById("step-one-p").style.color = '#35b5e3';
-      document.getElementById("step-one-circle").style.display = 'none';
       document.getElementById("step-one-check").style.display = 'block';
       document.getElementById("step-one-check").style.color = '#35b5e3';
   
@@ -202,6 +202,9 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       stepTwoLeft.style.backgroundColor = '#f3f3f3';
       stepTwoLeft.style.border = 'solid 1px #efefef';
       document.getElementById("step-two-p").style.color = '#555';
+      document.getElementById("step-two-circle").style.display = 'block';
+      document.getElementById("step-two-circle").style.display = '#555';
+      document.getElementById("step-two-check").style.display = 'none';
       document.getElementById("step-two-check").style.color = '#555';
     }
   }
@@ -262,7 +265,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-three-check").style.color = '#555';
     }else if(window.innerWidth <= 670){
       document.getElementById("step-one-filling").style.display = 'none';
-      document.getElementById("step-one-done").style.display = 'block';
+      document.getElementById("step-one-done").style.display = 'none';
       stepOneLeft.style.height = '75px';
       stepOneLeft.style.marginTop = '5px';
       stepOneLeft.style.backgroundColor = '#f3f3f3';
@@ -288,8 +291,10 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       stepThreeLeft.style.backgroundColor = '#f3f3f3';
       stepThreeLeft.style.border = 'solid 1px #efefef';
       document.getElementById("step-three-p").style.color = '#555';
-      document.getElementById("step-three-check").style.color = '#555';
-      
+      document.getElementById("step-three-circle").style.display = 'block';
+      document.getElementById("step-three-circle").style.display = '#555';
+      document.getElementById("step-three-check").style.display = 'none';
+      document.getElementById("step-three-check").style.color = '#555';      
     }
   }
   
@@ -330,7 +335,6 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-three-check").style.color = '#35b5e3';
   
       document.getElementById("step-four-filling").style.display = 'none';
-      document.getElementById("step-four-done").style.display = 'none';
       stepFourLeft.style.marginLeft = '17%';
       stepFourLeft.style.marginTop = '0px';
       stepFourLeft.style.backgroundColor = '#f3f3f3';
@@ -345,7 +349,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-four-check").style.color = '#555';
     }else if(window.innerWidth <= 670){
       document.getElementById("step-two-filling").style.display = 'none';
-      document.getElementById("step-two-done").style.display = 'block';
+      document.getElementById("step-two-done").style.display = 'none';
       stepTwoLeft.style.height = '75px';
       stepTwoLeft.style.marginTop = '5px';
       stepTwoLeft.style.backgroundColor = '#f3f3f3';
@@ -365,12 +369,14 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-three-check").style.color = '#35b5e3';
   
       document.getElementById("step-four-filling").style.display = 'none';
-      document.getElementById("step-four-done").style.display = 'none';
       stepFourLeft.style.height = '75px';
       stepFourLeft.style.marginTop = '5px';
       stepFourLeft.style.backgroundColor = '#f3f3f3';
       stepFourLeft.style.border = 'solid 1px #efefef';
       document.getElementById("step-four-p").style.color = '#555';
+      document.getElementById("step-four-circle").style.display = 'block';
+      document.getElementById("step-four-circle").style.display = '#555';
+      document.getElementById("step-four-check").style.display = 'none';
       document.getElementById("step-four-check").style.color = '#555';
     }
   }
@@ -393,7 +399,6 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-four-filling").style.display = 'block';
       document.getElementById("step-four-filling").style.marginTop = '2px';
       document.getElementById("step-four-filling").style.borderTop = 'solid 1px #ccc';
-      document.getElementById("step-four-done").style.display = 'none';
       stepFourLeft.style.marginLeft = '15%';
       stepFourLeft.style.marginTop = '2px';
       stepFourLeft.style.backgroundColor = '#fff';
@@ -407,7 +412,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-four-check").style.color = '#35b5e3';
     }else if(window.innerWidth <= 670){
       document.getElementById("step-three-filling").style.display = 'none';
-      document.getElementById("step-three-done").style.display = 'block';
+      document.getElementById("step-three-done").style.display = 'none';
       stepThreeLeft.style.height = '75px';
       stepThreeLeft.style.marginTop = '5px';
       stepThreeLeft.style.backgroundColor = '#f3f3f3';
@@ -416,7 +421,6 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
       document.getElementById("step-three-check").style.color = '#555';
   
       document.getElementById("step-four-filling").style.display = 'block';
-      document.getElementById("step-four-done").style.display = 'none';
       stepFourLeft.style.height = '80px';
       stepFourLeft.style.marginTop = '0px';
       stepFourLeft.style.backgroundColor = '#fff';
@@ -429,7 +433,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
   
     confirmBooking();
   }
-  
+
   bookPrev2.addEventListener("click", toStepOne);
   bookPrev4.addEventListener("click", toStepThree);
   bookPrev3.addEventListener("click", toStepTwo);

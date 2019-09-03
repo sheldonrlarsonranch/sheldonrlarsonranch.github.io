@@ -10,7 +10,7 @@
 
     <body> 
         <!-- Header -->
-        <nav>
+        <nav class="opaque-header">
             <div class="logo-title-container">
                 <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
             </div>
@@ -32,7 +32,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="atv.html">ATV</a></li>
+                        <li><a href="hiking.html">Hiking</a></li>
+                        <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                        <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                        <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="sightseeing.html">Sightseeing</a></li>
+                        <li><a href="otherAttractions.html">Other</a></li>
+                    </ul>
+                </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -54,6 +65,7 @@
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
                         <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li>
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -79,33 +91,9 @@
 
         <div class="contact-container"> 
             <div class="contact-form-container">
-                <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-form-builder" id="7e034e49_1565934293"></div>
-                
+                <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-form-builder" id="7e034e49_1565934293"></div>    
             </div> 
-            <!--
-            <form id="contact" action="" method="post" enctype="text/plain" onsubmit="contactUsMail(); return false;">
-                <h3>Contact Us</h3>
-                <h4>Contact us with any questions and we'll get back to you as soon as possible!</h4>
-                <fieldset>
-                    <input id= "contact-name" placeholder="Your name" type="text" tabindex="1" required autofocus>
-                </fieldset>
-                <fieldset>
-                    <input id="contact-email" placeholder="Your Email Address" type="email" tabindex="2" required>
-                </fieldset>
-                <fieldset>
-                    <input id="contact-phone" placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
-                </fieldset>
-                <fieldset>
-                    <input id="contact-subject" placeholder="Subject" type="text" tabindex="4">
-                </fieldset>
-                <fieldset>
-                    <textarea id="contact-message" placeholder="Type your message here...." tabindex="5" required></textarea>
-                </fieldset>
-                <fieldset>
-                    <button type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                </fieldset>
-            </form>
-            -->
+            
             <div class="contact-information">
                 <div>
                     <h3>Connect with us</h3>

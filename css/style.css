@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+@import url('https://fonts.googleapis.com/css?family=Mate+SC|Nunito|Alegreya+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -27,8 +28,8 @@
     --home-form-text-hov: #fff;
 
     /*Default font*/
-    --default-font-family: Arial, Helvetica, sans-serif;
-    --secondary-font-family: "Roboto", Helvetica, Arial, sans-serif;
+    --default-font-family: 'Nunito', sans-serif;
+    --secondary-font-family: 'Mate SC', serif;
 
     /*Other Colors*/
     --accent-color: #FFC107;
@@ -53,39 +54,24 @@
     height: 100vh;
 }
 
-/* HOME PAGE */
-.homepage-background-container{
-    width: 100vw;
-    height: 100vh;
-}
-
-.homepage-background{
-    z-index: -1;
-}
-
-.homepage-background img{
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100vw;
-    height: 100vh;
-}
-
-#homepage{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
 /* Header Bar */
 nav{
     width: 100%;
     height: 60px;
-    background-color: rgba(255,255,255,0.65);
+    background-color: rgb(255,255,255);
     position: fixed;
     display: block;
     top: 0px;
     z-index: 13;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.solid-header, .solid-header ul li ul{
+    background-color: rgba(255,255,255, 1);
+}
+
+.opaque-header, .opaque-header ul li ul{
+    background-color: rgba(255,255,255, 0.65);
 }
 
 .logo-title-container{
@@ -131,7 +117,7 @@ nav ul li a{
     font-weight: bold;
     color: #000;
     font-size: 14px;
-    padding: 21px 10px;
+    padding: 20px 10px 19px 10px;
     display: block;
     text-decoration: none;
 }
@@ -265,9 +251,30 @@ nav ul li ul li a:hover{
     z-index: 13;
 }
 
+/* HOME PAGE */
+.homepage-background-container{
+    width: 100vw;
+    height: 100vh;
+}
 
+.homepage-background{
+    z-index: -1;
+}
 
-/* Booking Form Box  */
+.homepage-background img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100vw;
+    height: 100vh;
+}
+
+#homepage{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* HOMEPAGE Booking Form Box  */
 .booking-form{
     position: fixed;
     top: 50%;
@@ -320,7 +327,7 @@ input::placeholder{
     background-color: var(--home-form-btn-bg);
     border: none;
     height: 30px;
-    width: 190px;
+    width: 200px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -498,7 +505,7 @@ footer a{
     color: var(--other-accent);
 }
 
-#step-one-check, #step-two-check, #step-three-check, #step-four-check, #step-one-circle, #step-two-circle, #step-three-circle, #step-four-circle{
+#step-one-check, #step-two-check, #step-three-check, #step-four-check, #step-two-circle, #step-three-circle, #step-four-circle{
     color: #555;
     margin-top: 16px;
 }
@@ -507,7 +514,7 @@ footer a{
     color: var(--other-accent);
 }
 
-#step-one-circle, #step-two-check, #step-three-check, #step-four-check{
+#step-two-check, #step-three-check, #step-four-check{
     display: none;
 }
 
@@ -568,24 +575,18 @@ footer a{
     float: left;
     margin-top: 16px;
     margin-left: 16px;
+    
 }
 
 .step-one-middle{
     border-bottom: 1px solid #ccc;
 }
 
-#borderLeft1 {
-    border-left: 1px solid #ccc;
-    position: absolute;
-    height: 232px;
-    top: 173px;
-}
-
 .step-one-middle label, .step-two-middle label, .step-three-middle label{
+    display: block;
     color: grey;
     font-size: 16px;
     margin: 24px 0px 8px 32px;
-    display: block;
 }
 
 .date-icon, .cabin-icon, .person-icon, .email-icon {
@@ -609,6 +610,7 @@ footer a{
     height: 30px;
     padding-left: 0px;
     cursor: pointer;
+    font-family: var(--default-font-family);
 }
 
 .cabin-select-container, .date-select-container{
@@ -631,6 +633,7 @@ footer a{
     font-weight: 400;
     cursor: pointer;
     margin: 0px 16px 20px 32px;
+    font-family: var(--default-font-family);
 }
 
 .ppl-selection{
@@ -663,7 +666,8 @@ footer a{
     width: 50px;
 }
 
-#continue-btn-1{
+#continue-btn-1, #continue-btn-2, #continue-btn-3, #continue-btn-4, #previous-btn-2, #previous-btn-3, #previous-btn-4{
+    font-family: var(--default-font-family);
     margin-top: 16px;
     margin-bottom: 45px;
     float: right;
@@ -679,7 +683,12 @@ footer a{
     text-align: center;
     font-size: 14px;
 }
-#continue-btn-1:hover{
+
+#previous-btn-2, #previous-btn-3, #previous-btn-4{
+    float: left;
+}
+
+#continue-btn-1:hover, #continue-btn-2:hover, #continue-btn-3:hover, #continue-btn-4:hover, #previous-btn-2:hover, #previous-btn-3:hover, #previous-btn-4:hover{
     background-color: #ccc;
     color: #555;
     transition: 0.5s;
@@ -731,13 +740,6 @@ footer a{
 
 .step-two-middle{
     border-bottom: 1px solid #ccc;
-}
-
-#borderLeft2 {
-    border-left: 1px solid #ccc;
-    position: absolute;
-    height: 232px;
-    top: 251px;
 }
 
 .guest-name-container{
@@ -817,31 +819,6 @@ footer a{
     margin: 0px 16px 20px 48px;
 }
 
-#continue-btn-2, #previous-btn-2{
-    margin-top: 16px;
-    margin-bottom: 45px;
-    float: right;
-    height: 35px;
-    line-height: 35px;
-    width: 100px;
-    background-color: #efefef;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
-    color: #555;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-}           
-#previous-btn-2{
-    float: left;
-}
-#continue-btn-2:hover, #previous-btn-2:hover{
-    background-color: #ccc;
-    color: #555;
-    transition: 0.5s;
-}
-
 /* Step Three Completed */
 #step-three-done{
     background-color: #fff;
@@ -899,51 +876,17 @@ footer a{
     margin: 0px 16px 20px 48px;
 }
 
+#add-comment::placeholder{
+    font-family: var(--default-font-family);
+    color: rgb(155, 155, 155);
+}
+
 .step-three-middle label{
     margin-left: 48px;
 }
 
-#borderLeft3 {
-    border-left: 1px solid #ccc;
-    position: absolute;
-    height: 202px;
-    top: 328px;
-}
-
-#continue-btn-3, #previous-btn-3{
-    margin-top: 16px;
-    margin-bottom: 45px;
-    float: right;
-    height: 35px;
-    line-height: 35px;
-    width: 100px;
-    background-color: #efefef;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
-    color: #555;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-}           
-#previous-btn-3{
-    float: left;
-}
-#continue-btn-3:hover, #previous-btn-3:hover{
-    background-color: #ccc;
-    color: #555;
-    transition: 0.5s;
-}
-
 /* Step Four Completed */
 #step-four-form-hidden{
-    display: none;
-}
-#step-four-done{
-    background-color: #fff;
-    border-right: solid 1px #ccc;
-    border-bottom: solid 1px #ccc;
-    height: 75px;
     display: none;
 }
 
@@ -961,6 +904,8 @@ footer a{
 }
 
 .step-four-middle h1{
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     padding: 16px 0px 8px 0px;
 }
 
@@ -987,31 +932,6 @@ footer a{
 #final-note, #final-note2{
     margin-top: 20px;
     font-size: 14px;
-}
-
-#continue-btn-4, #previous-btn-4{
-    margin-top: 16px;
-    margin-bottom: 16px;
-    float: right;
-    height: 35px;
-    line-height: 35px;
-    width: 100px;
-    background-color: #efefef;
-    border: none;
-    border-radius: 5px;
-    box-shadow: none;
-    color: #555;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-}           
-#previous-btn-4{
-    float: left;
-}
-#continue-btn-4:hover, #previous-btn-4:hover{
-    background-color: #ccc;
-    color: #555;
-    transition: 0.5s;
 }
 
 #formspree{
@@ -1090,7 +1010,8 @@ footer a{
 }
 
 .overview-text-container h1{
-    font-family: var(--default-font-family);
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     font-size: 2vw;
     padding: 0 10%;
     font-weight: bold;
@@ -1098,25 +1019,21 @@ footer a{
 }
 
 .overview-text-container h6{
-    font-family: var(--default-font-family);
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     font-size: 3vw;
     padding: 0 10%;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.overview-hosts-image{
-    width: 40%;
-    height: 100%;
+.overview-text-container a{
+    color: blue;
+    text-decoration: none;
 }
 
 .overview-hosts-image img{
-    display: block;
-    position: relative;
-    list-style: none;
     overflow: hidden;
-    top: 50%;
-    transform: translate(0, -50%);
     border-radius: 50%;
     width: 35vw;
     height: 35vw;
@@ -1251,7 +1168,8 @@ footer a{
     position: relative;
     top: 70%;
     line-height: 40px;
-    font-family: var(--default-font-family);
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     color: #fff;
     text-shadow: 2px 2px #000;
     font-size: 2em;
@@ -1396,7 +1314,8 @@ footer a{
 }
 
 .overview-container h1{
-    font-family: var(--default-font-family);
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     padding: 16px 16px 8px 16px;
 }
 
@@ -1570,7 +1489,6 @@ footer a{
     transform: scale(1.1);
 }
 
-
 /* MAIN CABIN PAGE */
 
 .cabin-overview-icon-container{
@@ -1585,6 +1503,10 @@ footer a{
     width: auto;
 }
 
+.main-cabin-short{
+    padding: 0 20px !important;
+}
+
 .cabin-image-carousel-container{
     display: block;
     object-fit: contain;
@@ -1592,6 +1514,7 @@ footer a{
     padding: 0;
     width: 96%;
     height: auto;
+    max-height: 90vh;
     overflow: hidden;
     z-index: 1;
 }
@@ -1681,6 +1604,8 @@ footer a{
 }
 
 .cabin-description-text-area h2{
+    font-family: var(--secondary-font-family);     
+    letter-spacing: 0.05em;
     margin: 20px 16px 10px 0;
     padding: 5px 0;
     width: 100%;
@@ -1736,7 +1661,7 @@ footer a{
 /* CONTACT US PAGE */
 .contact-title{
     position: absolute;
-    font-family: var(--secondary-font-family);
+    font-family: var(--default-font-family);
     color: #fff;
     text-align: center;
     top: 0;
@@ -2043,11 +1968,6 @@ footer a{
         text-transform: uppercase;
     }
     
-    .overview-hosts-image{
-        width: 100%; /**/
-        height: 100%; /**/
-    }
-    
     .overview-hosts-image img{
         display: block;
         position: relative;
@@ -2088,7 +2008,6 @@ footer a{
         display: none; /**/ 
     }
     
-    
     .overview-overlay-container{
         display: flex; /**/
         flex-direction: column; /**/
@@ -2124,8 +2043,10 @@ footer a{
         border-bottom: 2px solid var(--accent-color);
         margin: 10px 80% 0 16px; /**/
     }
-          
 
+    .cabin-overview-extra-details{
+        font-size: 13px !important;
+    }
 }
 
 @media only screen and (max-width: 750px){
@@ -2287,11 +2208,11 @@ footer a{
     
     /* Step One Completed */
     #step-one-done{
+        display: none;
         background-color: #fff;
         border: solid 1px #ccc; /**/
         margin-bottom: 2px; /**/
         height: 74px;
-        display: none;
     }
     
     #step-one-done p{
@@ -2339,10 +2260,6 @@ footer a{
     
     .step-one-middle{
         border-bottom: none;
-    }
-    
-    #borderLeft1 {
-        display: none; /**/
     }
     
     .step-one-middle label, .step-two-middle label, .step-three-middle label{
@@ -2428,7 +2345,8 @@ footer a{
     }
 
     
-    #continue-btn-1{
+    #continue-btn-1, #continue-btn-2, #continue-btn-3, #continue-btn-4, #previous-btn-2, #previous-btn-3, #previous-btn-4{ /**/
+        font-family: var(--default-font-family);
         margin-top: 16px;
         margin-bottom: 45px;
         float: right;
@@ -2444,7 +2362,12 @@ footer a{
         text-align: center;
         font-size: 14px;
     }
-    #continue-btn-1:hover{
+
+    #previous-btn-2, #previous-btn-3, #previous-btn-4{ /**/
+        float: left;
+    }
+
+    #continue-btn-1:hover, #continue-btn-2:hover, #continue-btn-3:hover, #continue-btn-4:hover, #previous-btn-2:hover, #previous-btn-3:hover, #previous-btn-4:hover{ /**/
         background-color: #ccc;
         color: #555;
         transition: 0.5s;
@@ -2494,10 +2417,6 @@ footer a{
     
     .step-two-middle{
         border: 1px solid #ccc;
-    }
-    
-    #borderLeft2 {
-        display: none; /**/
     }
     
     .guest-name-container{
@@ -2584,33 +2503,7 @@ footer a{
         font-weight: 400;
         margin: 0px 16px 20px 40px; /**/
     }
-    
-    #continue-btn-2, #previous-btn-2{
-        margin-top: 16px;
-        margin-bottom: 45px;
-        float: right;
-        height: 35px;
-        line-height: 35px;
-        width: 100px;
-        background-color: #efefef;
-        border: none;
-        border-radius: 5px;
-        box-shadow: none;
-        color: #555;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-    }       
 
-    #previous-btn-2{
-        float: left;
-    }
-    #continue-btn-2:hover, #previous-btn-2:hover{
-        background-color: #ccc;
-        color: #555;
-        transition: 0.5s;
-    }
-    
     /* Step Three Completed */
     #step-three-done{
         background-color: #fff;
@@ -2672,35 +2565,6 @@ footer a{
         margin-left: 48px;
     }
     
-    #borderLeft3 {
-        display: none; /**/
-    }
-    
-    #continue-btn-3, #previous-btn-3{
-        margin-top: 16px;
-        margin-bottom: 45px;
-        float: right;
-        height: 35px;
-        line-height: 35px;
-        width: 100px;
-        background-color: #efefef;
-        border: none;
-        border-radius: 5px;
-        box-shadow: none;
-        color: #555;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-    }           
-    #previous-btn-3{
-        float: left;
-    }
-    #continue-btn-3:hover, #previous-btn-3:hover{
-        background-color: #ccc;
-        color: #555;
-        transition: 0.5s;
-    }
-    
     /* Step Four Completed */
     #step-four-form-hidden{
         display: none;
@@ -2753,31 +2617,6 @@ footer a{
     #final-note, #final-note2{
         margin-top: 20px;
         font-size: 14px;
-    }
-    
-    #continue-btn-4, #previous-btn-4{
-        margin-top: 16px;
-        margin-bottom: 16px;
-        float: right;
-        height: 35px;
-        line-height: 35px;
-        width: 100px;
-        background-color: #efefef;
-        border: none;
-        border-radius: 5px;
-        box-shadow: none;
-        color: #555;
-        cursor: pointer;
-        text-align: center;
-        font-size: 14px;
-    }           
-    #previous-btn-4{
-        float: left;
-    }
-    #continue-btn-4:hover, #previous-btn-4:hover{
-        background-color: #ccc;
-        color: #555;
-        transition: 0.5s;
     }
     
     #formspree{
@@ -2896,6 +2735,10 @@ footer a{
     .center-cabins-price p{
         padding: 0 0 0 16px; /**/    
     }
+
+    .cabin-overview-extra-details{
+        font-size: 16px !important;
+    }
 }
 
 @media only screen and (max-width: 630px){
@@ -2994,9 +2837,6 @@ footer a{
         margin: 0; /**/
     }
 
-
-
-/************************************************************/
     .attractions-overview-clickHere{
         display: block; /**/
         position: static; /**/
@@ -3167,4 +3007,27 @@ footer a{
 
 
 /* FONT AWESOME ICONS *//*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css*//*https://cdnjs.com/libraries/font-awesome*/
-.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}
+.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}@font-face{font-family: "Font Awesome 5 Brands";font-style:normal;font-weight:normal;font-display:auto;src:url(../webfonts/fa-brands-400.eot);src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family: "Font Awesome 5 Brands"}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:auto;src:url(../webfonts/fa-regular-400.eot);src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")}.far{font-weight:400}@font-face{font-family: "Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:auto;src:url(../webfonts/fa-solid-900.eot);src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")}.fa,.far,.fas{font-family: "Font Awesome 5 Free"}.fa,.fas{font-weight:900}.fa-bars:before{content:"\f0c9"}.fa-times:before{content:"\f00d"}.fa-envelope:before{content:"\f0e0"}.fa-phone:before{content:"\f095"}.fa-map-marker-alt:before{content:"\f3c5"}.fa-user-friends:before{content:"\f500"}.fa-user:before{content:"\f007"}.fa-bed:before{content:"\f236"}.fa-bath:before{content:"\f2cd"}.fa-car:before{content:"\f1b9"}.fa-paw:before{content:"\f1b0"}.fa-shower:before{content:"\f2cc"}.fa-check-circle:before{content:"\f058"}.fa-circle:before{content:"\f111"}.fa-moon:before{content:"\f186"}.fa-home:before{content:"\f015"}.fa-calendar-alt:before{content:"\f073"}.fa-envelope:before{content:"\f0e0"}.fa-mountain:before{content:"\f6fc"}.fa-route:before{content:"\f4d7"}.fa-star:before{content:"\f005"}.fa-chevron-down:before{content:"\f078"}.fa-comment:before{content:"\f075"}
+
+.site-map-list{
+    font-family: var(--default-font-family);
+    font-size: 1em;
+    padding: 16px 32px;
+    text-decoration: none;
+    list-style-type: disc;
+}
+
+.site-map-list li{
+    line-height: 1.5em;
+    color: black;
+    text-decoration: none;
+    list-style-type: disc;
+}
+
+.site-map-list li a{
+    color: black;
+}
+
+.site-map-list li ul{
+    padding: 0 24px;
+}

@@ -11,7 +11,7 @@
 
     <body>
         <!-- Header -->
-        <nav style="background-color: rgba(255,255,255,1)">
+        <nav class="solid-header">
             <div class="logo-title-container">
               <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
           </div>
@@ -33,7 +33,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                  <ul>
+                      <li><a href="atv.html">ATV</a></li>
+                      <li><a href="hiking.html">Hiking</a></li>
+                      <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                      <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                      <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                      <li><a href="history.html">History</a></li>
+                      <li><a href="sightseeing.html">Sightseeing</a></li>
+                      <li><a href="otherAttractions.html">Other</a></li>
+                  </ul>
+              </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -55,6 +66,7 @@
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
                         <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li>
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -74,23 +86,22 @@
           <div class="bookNow-left">
             <div id="step-one-left">
               <p id="step-one-p">Stay Details</p>
-              <i id="step-one-circle" class="far fa-circle circle-icon"></i>
-              <i id="step-one-check" class="fa fa-check-circle check-circle-icon"></i>
+              <i id="step-one-check" class="fas fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-two-left">
               <p id="step-two-p">Contact Info</p>
               <i id="step-two-circle" class="far fa-circle circle-icon"></i>
-              <i id="step-two-check" class="far fa-check-circle check-circle-icon"></i>
+              <i id="step-two-check" class="fas fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-three-left">
               <p id="step-three-p">Comments</p>
               <i id="step-three-circle" class="far fa-circle circle-icon"></i>
-              <i id="step-three-check" class="far fa-check-circle check-circle-icon"></i>
+              <i id="step-three-check" class="fas fa-check-circle check-circle-icon"></i>
             </div>
             <div id="step-four-left">
               <p id="step-four-p">Confirm</p>
               <i id="step-four-circle" class="far fa-circle circle-icon"></i>
-              <i id="step-four-check" class="far fa-check-circle check-circle-icon"></i>
+              <i id="step-four-check" class="fas fa-check-circle check-circle-icon"></i>
             </div>
           </div>
 
@@ -107,7 +118,6 @@
             <!-- Step One while filling out -->
             <div id="step-one-filling">
               <div class="step-one-middle">
-                <div id="borderLeft1"></div>
                 <div class="cabin-select-container">
                   <i class="fas fa-home cabin-icon"></i>
                   <label>Cabin</label>
@@ -145,6 +155,7 @@
             <!-- Step Two Completed -->
             <div id="step-two-done">
                 <p id= "step-two-done-name">*Please enter your name*</p>
+                <i class="fas fa-phone envelope-icon"></i>
                 <p id= "step-two-done-phone">*Please enter a phone number*</p>
                 <i class="fas fa-envelope envelope-icon"></i>
                 <p id= "step-two-done-email">*Please enter an e-mail address*</p>
@@ -152,7 +163,6 @@
             <!-- Step Two while filling out -->
             <div id="step-two-filling">
               <div class="step-two-middle">
-                <div id="borderLeft2"></div>
                 <div class="guest-name-container">
                   <div class="guest-name">
                     <i class="fas fa-user person-icon"></i>
@@ -187,38 +197,34 @@
             <!-- Step Three while filling out -->
             <div id="step-three-filling">
               <div class="step-three-middle">
-                <div id="borderLeft3"></div>
                 <div class="comments-container">
                   <i class="fas fa-comment comments-icon"></i>
-                  <label id="comment-label">Additional Message for Owner</label>
-                  <textarea id="add-comment"></textarea>
+                  <label id="comment-label">Additional Message for Host</label>
+                  <textarea id="add-comment" placeholder="Feel free to write us about any questions or concerns you may have. If you have any additional needs or anything you want us to be aware of, you can do so here!"></textarea>
                 </div>
                 <button id="previous-btn-3">PREVIOUS</button>
                 <button id="continue-btn-3">CONTINUE</button>
               </div>
             </div>
 
-            <!-- Step Three Completed -->
-            <div id="step-four-done"></div>
-            <!-- Step Three while filling out -->
-            
+            <!-- Step Four while filling out -->
             <div id="step-four-filling">
                 <div class="step-four-middle">
                     <h1>Contact Information</h1>
                     <p><strong>Name: </strong><span id="confirm-name"></span></p>
                     <p><strong>E-mail: </strong><span id="confirm-email"></span></p>
-                    <p><strong>Phone #: </strong><span id="confirm-phone"></span></p>
+                    <p><strong>Phone: </strong><span id="confirm-phone"></span></p>
                     <h1>Group Information</h1>
                     <p><strong>Total Number of Persons: </strong><span id="confirm-totalNumber"></span></p>
-                    <p><strong>Number of Adults: </strong><span id="confirm-adults"></span></p>
-                    <p><strong>Number of Children: </strong><span id="confirm-children"></span></p>
-                    <p><strong>Number of Pets: </strong><span id="confirm-pets"></span></p>
+                    <p><strong>Adults: </strong><span id="confirm-adults"></span></p>
+                    <p><strong>Children: </strong><span id="confirm-children"></span></p>
+                    <p><strong>Pets: </strong><span id="confirm-pets"></span></p>
                     <h1>Stay Information</h1>
                     <p><strong>Cabin Selection: </strong><span id="confirm-cabin"></span></p>
                     <p><strong>Check-In: </strong><span id="confirm-startDate"></span> (after 3:00 pm)</p>
                     <p><strong>Check-Out: </strong><span id="confirm-endDate"></span> (before 11:00 am)</p>
                     <p><strong>Number of Nights: </strong><span id="confirm-nights"></span></p>
-                    <h1>Message to Owner</h1>
+                    <h1>Message to Host</h1>
                     <p>"<span id="confirm-message"></span>"</p>
                     <h1 id="total-cost">$<span id="confirm-cost"></span></h1>
                     <p id="cost-calculator">- night(s) @ $-.--/night</p>

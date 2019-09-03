@@ -10,7 +10,7 @@
 
     <body>
          <!-- Header -->
-         <nav style="background-color: rgba(255,255,255,1)">
+         <nav class="solid-header">
             <div class="logo-title-container">
                 <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
             </div>
@@ -32,7 +32,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="atv.html">ATV</a></li>
+                        <li><a href="hiking.html">Hiking</a></li>
+                        <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                        <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                        <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="sightseeing.html">Sightseeing</a></li>
+                        <li><a href="otherAttractions.html">Other</a></li>
+                    </ul>
+                </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -54,6 +65,7 @@
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
                         <ul id="cabin-sub-menu-pages"> 
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li>
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -74,7 +86,7 @@
 
         <div class="overview-container">
             <h1>Other Attractions</h1>
-            <p>Sanpete County is an outdoor enthusiasts paradise! But you don't need to bring ATVs or mountain bikes to enjoy everything Sanpete has to offer! There are countless activities for you to enjoy with your whole family or group! Below are just a few of our favorite activities, if you want some more activity ideas we recommend also looking at <a href="http://sanpete.com/">Sanpete.com</a> or <a href="https://www.go-utah.com/Sanpete-County/">Go-Utah</a>.</p>
+            <p>Sanpete County is an outdoor enthusiasts paradise! But you don't need to bring ATVs or mountain bikes to enjoy everything Sanpete has to offer! In fact, you don't even need to be an outdoorsy person! There are countless activities for you to enjoy with your whole family or group! Below are just a few of our favorite activities, if you want some more activity ideas we recommend also looking at <a href="http://sanpete.com/" target="_blank">Sanpete.com</a> or <a href="https://www.go-utah.com/Sanpete-County/" target="_blank">Go-Utah</a>.</p>
 
             <!--Palisades-->
             <div class="attractions-overview-container">
@@ -111,7 +123,7 @@
                 </div>
                 <div class="attractions-overview-text hiking-overview-text">
                     <a href="http://sanpete.com/pages/fish" target="_blank"><h3>Fishing</h3></a>
-                    <p>Sanpete has an endless supply of fantastic waterholes for you to enjoy some fishing while also enjoying some of the beautiful landscape around you! One of our favorite spots is Lake Hill up Ephraim Canyon, there are countless locations for you to go fishing!  </p>
+                    <p>Sanpete has an endless supply of fantastic waterholes for you to enjoy some fishing while also enjoying some of the beautiful landscape around you! One of our favorite spots is Lake Hill up Ephraim Canyon, but there are countless locations for you to go fishing all over Sanpete County!</p>
                 </div>
                 <div class="attractions-overview-clickHere">
                     <a href="http://sanpete.com/pages/fish" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
@@ -139,19 +151,38 @@
                 </div>
                 <div class="attractions-overview-text hiking-overview-text">
                     <a href="http://manticity.com/swimming.html" target="_blank"><h3>Manti Aquatic Center</h3></a>
-                    <p>The pool in Manti city is a great place for the whole family to have some fun playing in the water! This awuatic center has water slides, water games and toys, and more! So if you're looking for a great afternoon at the pool then look no further than here!</p>
+                    <p>The pool in Manti city is a great place for the whole family to have some fun playing in the water! This aquatic center has water slides, water games and toys, and more! So if you're looking for a great afternoon at the pool then look no further than here!</p>
                 </div>
                 <div class="attractions-overview-clickHere">
                     <a href="http://manticity.com/swimming.html" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
                 </div>
             </div>
 
+            <!-- Mammoth -->
+            <div class="attractions-overview-container">
+                <div class="attractions-overview-image">
+                    <a href="http://sanpete.com/businesses/show/313-fairview-museum-of-history-and-art" target="_blank"><img src="images/mammoth_1.jpg" alt=""></a>
+                </div>
+                <div class="attractions-overview-text hiking-overview-text">
+                    <a href="http://sanpete.com/businesses/show/313-fairview-museum-of-history-and-art" target="_blank"><h3>Intact Columbian Mammoth</h3></a>
+                    <p>That's right! Fairview Museum of History and Art houses a nearly fully intact Columbian mammoth that was unearthed only miles away in 1988. The quality and altitude at which it was found make this Mammoth remarkably well-preserved!</p>
+                </div>
+                <div class="attractions-overview-clickHere">
+                    <a href="http://sanpete.com/businesses/show/313-fairview-museum-of-history-and-art" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
+                </div>
+            </div>
+
 
             <h2>Additional Resources</h2>
             <ul>
-                <li><a href="downloadables/arapeen_ohv_trail_map.pdf" target="_blank">Free OHV Trail Map Download</a></li>
+                <li><a href="http://sanpete.com/" target="_blank">Sanpete.com</a></li>
+                <li><a href="https://www.go-utah.com/Sanpete-County/" target="_blank">Go-Utah</a></li>
+                <li><a href="https://www.heraldextra.com/sanpete-county/special-section/recreation-activities-galore-in-sanpete-valley/article_bb1c576d-95c1-522b-a55f-6d58fc32b9d0.html" target="_blank">Herald Extra</a></li>
+                <li><a href="https://www.google.com/destination/map/topsights?q=sanpete+county+sightseeing&rlz=1C1CHBF_enUS860US860&oq=sanpete+county&aqs=chrome.0.69i59j69i60l3j69i65l2.1565j0j7&sourceid=chrome&ie=UTF-8&tcfs=&dest_src=ts&dest_mid=/m/0jchy&sa=X&ved=2ahUKEwj5ttmUsKjkAhWQqp4KHWm5BK4Q6tEBKAQwAHoECAoQBw#dest_mid=/m/0jchy&dest_src=ts&tcfs=EhoKCC9tLzBqY2h5Eg5TYW5wZXRlIENvdW50eQ" target="_blank">Google Recommendations</a></li>
+                <li><a href="https://www.fs.usda.gov/recmain/mantilasal/recreation" target="_blank">Forest Service</li>
+                <li><a href="tel:435-340-0075" target="_blank">Ask Us!</a></li>
             </ul>
-
+            
         </div>
 
 

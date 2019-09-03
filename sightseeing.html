@@ -10,7 +10,7 @@
 
     <body>
          <!-- Header -->
-         <nav style="background-color: rgba(255,255,255,1)">
+         <nav class="solid-header">
             <div class="logo-title-container">
                 <a href="index.html"><img class="logo-title" src="images/icons/logo_title.svg" alt=""></a>
             </div>
@@ -32,7 +32,18 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="availability.html">Availability</a></li>
-                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="attractions.html">Attractions <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
+                    <ul>
+                        <li><a href="atv.html">ATV</a></li>
+                        <li><a href="hiking.html">Hiking</a></li>
+                        <li><a href="rockClimbing.html">Rock Climbing</a></li>
+                        <li><a href="snowmobiling.html">Snowmobiling</a></li>
+                        <li><a href="mtnBiking.html">Mtn Biking</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="sightseeing.html">Sightseeing</a></li>
+                        <li><a href="otherAttractions.html">Other</a></li>
+                    </ul>
+                </li>
                 <li><a href="map.html">Map</a></li>
                 <li id="menu-icon" class="menu-trigger"><a><i class="fas fa-bars menu-icon"></i></a></li>
                 <li id="menu-close-icon" class="menu-close"><a><i class="fas fa-times close-icon"></i></a></li>
@@ -53,7 +64,8 @@
                         </ul>
                     </li>
                     <li  class="menu-page-link"><a id="cabins-menu">Cabins <span><img src="images/icons/chevron-down.svg" height="10" width="7" alt="down arrow icon"/></span></a>
-                        <ul id="cabin-sub-menu-pages"> 
+                        <ul id="cabin-sub-menu-pages">
+                            <li><a href="cabinOverview.html">Cabins Overview</a></li> 
                             <li><a href="mainCabin.html">Main Cabin</a></li>
                             <li><a href="guestCabin.html">Guest Cabin</a></li>
                             <li><a href="otherEvents.html">Other Events</a></li>
@@ -74,7 +86,7 @@
 
         <div class="overview-container">
             <h1>Sightseeing</h1>
-            <p>Read more about our recommended historical sites below, or if you want more sites, we recommend also looking at <a href="http://sanpete.com/pages/historical" target="_blank">Sanpete.com</a>.</p>
+            <p>The Wasatch Mountain Range that runs through the heart of Sanpete provides an array of gorgeous sites for all to enjoy. From the high panoramic views on top of Skyline drive to the varied scenery along the Mount Nebo scenic drive, you will not be dissapointed with the experience you have here. Although we've listed some of our favorite places for sightseeing, it's worth mentioning that any of our recommendations under the other attractions pages could also be listed under sightseeing. We're serious though, you'll get great views and sites no matter where you go! So read on below for some of our favorite sightseeing locations not listed under other section, or if you want more sites, we recommend also looking at <a href="http://sanpete.com/pages/drives" target="_blank">Sanpete.com</a> or <a href="https://www.go-utah.com/Sanpete-County/tourism-attractions-sightseeing/" target="_blank">Go-Utah</a>.</p>
 
             <!--Skyline Drive-->
             <div class="attractions-overview-container">
@@ -111,7 +123,7 @@
                 </div>
                 <div class="attractions-overview-text hiking-overview-text">
                     <a href="http://sanpete.com/pages/temple" target="_blank"><h3>Manti Temple</h3></a>
-                    <p>Built from 1875 to 1893, the Manti temple is an impressive and beautiful building built on top of "temple hill" in Manti, Utah. The temple is a special place of worship for members of The Church of Jesus Christ of Latter-Day Saints and it's beauty is appreciated by all!</p>
+                    <p>Built from 1875 to 1893, the Manti temple is an impressive and beautiful building built on top of "temple hill" in Manti, Utah. The temple is a special place of worship for members of The Church of Jesus Christ of Latter-Day Saints, but it's beauty is appreciated by all!</p>
                 </div>
                 <div class="attractions-overview-clickHere">
                     <a href="http://sanpete.com/pages/temple" target="_blank"><p>Click here</p><p>for more</p><p>information</p></a>
@@ -135,8 +147,13 @@
             <h2>Additional Resources</h2>
             <ul>
                 <li><a href="https://www.google.com/maps/d/viewer?ie=UTF8&hl=en&msa=0&ll=39.605688%2C-111.62658699999997&spn=1.6844%2C3.433228&z=8&mid=1HODx2ih4pHDuPsxrLnUgvt5M4EE" target="_blank">Skyline Drive Map Overlay</a></li>
+                <li><a href="http://sanpete.com/pages/drives" target="_blank">Sanpete.com Scenic Drives</a></li>
+                <li><a href="https://www.go-utah.com/Sanpete-County/tourism-attractions-sightseeing/" target="_blank">Go-Utah</a></li>
+                <li><a href="https://www.heraldextra.com/sanpete-county/special-section/recreation-activities-galore-in-sanpete-valley/article_bb1c576d-95c1-522b-a55f-6d58fc32b9d0.html" target="_blank">Herald Extra</a></li>
+                <li><a href="https://www.fs.usda.gov/activity/mantilasal/recreation/scenicdrivinginfo/?recid=72816&actid=105" target="_blank">Forest Service</a></li>
+                <li><a href="https://www.google.com/destination/map/topsights?q=sanpete+county+sightseeing&rlz=1C1CHBF_enUS860US860&oq=sanpete+county&aqs=chrome.0.69i59j69i60l3j69i65l2.1565j0j7&sourceid=chrome&ie=UTF-8&tcfs=&dest_src=ts&dest_mid=/m/0jchy&sa=X&ved=2ahUKEwj5ttmUsKjkAhWQqp4KHWm5BK4Q6tEBKAQwAHoECAoQBw#dest_mid=/m/0jchy&dest_src=ts&tcfs=EhoKCC9tLzBqY2h5Eg5TYW5wZXRlIENvdW50eQ" target="_blank">Google Recommendations</a></li>
+                <li><a href="tel:435-340-0075" target="_blank">Ask Us!</a></li>
             </ul>
-
         </div>
 
 
