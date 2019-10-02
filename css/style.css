@@ -3028,3 +3028,30 @@ footer a{
 .site-map-list li ul{
     padding: 0 24px;
 }
+
+
+.square-number, .square-number-1{
+    padding: 1px 2px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+.square-number-1{
+    padding: 1px 6px;
+}
+
+.circle-number, .circle-number-2{
+    border-radius: 50%;
+    padding: 1px 6px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+.circle-number-2{
+    padding: 1px 2px;
+}
+
+.red-color{
+    color: red;
+    border-color: red;
+}
