@@ -78,7 +78,7 @@ $(function() { //Function for the dateRangePicker
       minDate: today,
       startDate: window.location.search == "" ? today : urlStartDateParse, //Sets start date to today or value from url
       endDate: window.location.search == "" ? nextWeek : urlEndDateParse, //Sets end date to one woeek from today or from url
-      autoApply: true,
+      autoApply: true
       //isInvalidDate: function(date) { //This function is for any dates that can't be selected
         //if (date.format('YYYY-M-D') == '2019-10-25') {
         //    return true; 
