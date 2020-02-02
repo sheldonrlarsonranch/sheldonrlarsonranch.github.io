@@ -83,7 +83,7 @@ $(function() { //Function for the dateRangePicker
         //if (date.format('YYYY-M-D') == '2019-10-25') {
         //    return true; 
         //}
-    }
+    //}
       });
 });
 
