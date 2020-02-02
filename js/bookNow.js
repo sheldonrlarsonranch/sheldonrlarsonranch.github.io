@@ -14,39 +14,107 @@ const stepFourLeft = document.getElementById('step-four-left');
 /* Functions for Book Now page */
 const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
     let nightlyCost;
-    if(cabinSelected === "Main Cabin"){
+    if(cabinSelected === "Main Cabin"){ //Calculates if main cabin is selected
       nightlyCost = 129;
-      if(nights >= 7){
+      if(nights >= 7){  //Gives discount for stays longer than a week
         nightlyCost = 775/7;
       }
-    }else if(cabinSelected === "Guest Cabin"){
+    }else if(cabinSelected === "Guest Cabin"){ //Calculates if guest cabin is selected
       nightlyCost = 99;
-      if(nights >= 7){
+      if(nights >= 7){ //Gives discount for stays longer than a week
         nightlyCost = 600/7;
       }
-    }else if(cabinSelected === "Both Cabins"){
+    }else if(cabinSelected === "Both Cabins"){ //Calculates if both cabins are selected
       nightlyCost = 200;
-      if(nights >= 7){
+      if(nights >= 7){ //Gives discount for stays longer than a week
         nightlyCost = 1200/7;
       }
-    }else{
+    }else{  //Error message if something goes wrong
       return "Error calculating cost. You may still proceed and then contact the owner regarding price. We apologize for the inconvenience."
     }
     return nightlyCost;
   }
   
-  const formatPhoneNumber = (guestPhone) => {
+  const formatPhoneNumber = (guestPhone) => { //This checks if the phone number is in the right format
     const cleaned = ('' + guestPhone).replace(/\D/g, '');
-      const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+      const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/); //Splits up the numbers by first 3 numbers, next 3 numbers, and last 4 numbers
       if (match) {
-        guestPhone = '(' + match[1] + ') ' + match[2] + '-' + match[3];
+        guestPhone = '(' + match[1] + ') ' + match[2] + '-' + match[3]; //Organizes format like: (123)456-7890
       }else{
-        guestPhone = "Can't recognize phone number";
+        guestPhone = "Can't recognize phone number"; //Error mesage
       }
       return guestPhone;
   }
   
-  function stepOneDone(){
+  function stepOneDone(){ 
+    const startDate = document.getElementById('date-select').value.slice(0,10); //Declares variable for start date
+    const endDate = document.getElementById('date-select').value.slice(13,23); //Declares variable for end date
+    const startDateFormatted = new Date(Date.parse(startDate)); //Formats the starting date
+    const endDateFormatted = new Date(Date.parse(endDate)); //Formats the end date
+    const startDateParse = startDateFormatted.toString().slice(0,15); //Parses for the starting date
+    const endDateParse = endDateFormatted.toString().slice(0,15); //Parses for the end date
+    const nights = Math.round((endDateFormatted-startDateFormatted)/(1000*60*60*24)); //Formula to calculate how many nights
+    const stayDates = startDateParse.slice(0,3) + ", " + startDateParse.slice(8,11) + startDateParse.slice(4,8) + startDateParse.slice(11,15) + " - " + endDateParse.slice(0,3) + ", " + endDateParse.slice(8,11) + endDateParse.slice(4,8) + endDateParse.slice(11,15); //Variable to format the dates like Jan 01, 2019
+    document.getElementById("step-one-done-date-range").innerHTML = stayDates; //Puts the stay dates in the step one done section
+    document.getElementById("step-one-done-nights").innerHTML = nights + " nights"; //Puts nuber of nights in step one done section
+    const cabinSelect = document.getElementById('cabin-selection'); //Determines which cabin was selected
+    const cabinSelected = cabinSelect.options[cabinSelect.selectedIndex].text;
+    document.getElementById("step-one-done-cabin").innerHTML = cabinSelected; //Puts which cabin in the step one done section
+  }
+  
+  function stepTwoDone(){
+    if(document.getElementById('first-name').value === ""){ //Makes sure there's at least a first name given
+      return false;
+    }else{
+      const guestName = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value; //puts first name and last name together
+      document.getElementById("step-two-done-name").innerHTML = guestName; //puts name in step two done section
+    }
+    if(document.getElementById('guest-email').value === ""){ //Makes sure an email is given
+      return false;
+    }else{
+      const guestEmail = document.getElementById("guest-email").value;
+      document.getElementById("step-two-done-email").innerHTML = guestEmail; //Puts email in the step two done section
+    }
+    let guestPhone = document.getElementById("guest-phone").value; 
+    let phoneNumber = formatPhoneNumber(guestPhone); //Sends phone number to function to get formatted
+    document.getElementById("step-two-done-phone").innerHTML = phoneNumber; //Places phone number in step two done section
+    if(phoneNumber === "Can't recognize phone number"){ //Error if phone number is inccorect
+      return false;
+    }
+    return true;
+  }
+  
+  function confirmBooking(){ //Function for displaying all the information neatly (The variables ending in "0" are not displayed but are the variables sent to the email in the <form> section of bookNow.html)
+    //First and last names
+    document.getElementById("confirm-name").innerHTML = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value;
+    document.getElementById("confirm-name0").value = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value;
+    //Email
+    document.getElementById("confirm-email").innerHTML = document.getElementById('guest-email').value;
+    document.getElementById("confirm-email0").value = document.getElementById('guest-email').value;
+    //Phone number
+    let guestPhone = document.getElementById('guest-phone').value;
+    document.getElementById("confirm-phone").innerHTML = formatPhoneNumber(guestPhone);
+    document.getElementById("confirm-phone0").value = formatPhoneNumber(guestPhone);
+    //Number of guests
+    const totalGuests = Number(document.getElementById('adults').value) + Number(document.getElementById('children').value);
+    document.getElementById("confirm-totalNumber").innerHTML = totalGuests;
+    document.getElementById("confirm-totalNumber0").value = totalGuests;
+    //Number of adultes
+    document.getElementById("confirm-adults").innerHTML = document.getElementById('adults').value;
+    document.getElementById("confirm-adults0").value = document.getElementById('adults').value;
+    //Number of children
+    document.getElementById("confirm-children").innerHTML = document.getElementById('children').value;
+    document.getElementById("confirm-children0").value = document.getElementById('children').value;
+    //Number of pets
+    const numOfPets = Number(document.getElementById('pets').value);
+    document.getElementById("confirm-pets").innerHTML = numOfPets;
+    document.getElementById("confirm-pets0").value = numOfPets;
+    //Cabin selection
+    const cabinSelect = document.getElementById('cabin-selection');
+    const cabinSelected = cabinSelect.options[cabinSelect.selectedIndex].text;
+    document.getElementById("confirm-cabin").innerHTML = cabinSelected;
+    document.getElementById("confirm-cabin0").value = cabinSelected;
+    //Gets the dates, parses the date, makes it look in the format of "Jan 01, 2019" (like above)
     const startDate = document.getElementById('date-select').value.slice(0,10); 
     const endDate = document.getElementById('date-select').value.slice(13,23); 
     const startDateFormatted = new Date(Date.parse(startDate));
@@ -54,87 +122,20 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
     const startDateParse = startDateFormatted.toString().slice(0,15);
     const endDateParse = endDateFormatted.toString().slice(0,15);
     const nights = Math.round((endDateFormatted-startDateFormatted)/(1000*60*60*24));
-    const stayDates = startDateParse.slice(0,3) + ", " + startDateParse.slice(8,11) + startDateParse.slice(4,8) + startDateParse.slice(11,15) + " - " + endDateParse.slice(0,3) + ", " + endDateParse.slice(8,11) + endDateParse.slice(4,8) + endDateParse.slice(11,15);
-    document.getElementById("step-one-done-date-range").innerHTML = stayDates;
-    document.getElementById("step-one-done-nights").innerHTML = nights + " nights";
-    const cabinSelect = document.getElementById('cabin-selection');
-    const cabinSelected = cabinSelect.options[cabinSelect.selectedIndex].text;
-    document.getElementById("step-one-done-cabin").innerHTML = cabinSelected;
-  }
-  
-  function stepTwoDone(){
-    if(document.getElementById('first-name').value === ""){
-      return false;
-    }else{
-      const guestName = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value;
-      document.getElementById("step-two-done-name").innerHTML = guestName;
-    }
-    if(document.getElementById('guest-email').value === ""){
-      return false;
-    }else{
-      const guestEmail = document.getElementById("guest-email").value;
-      document.getElementById("step-two-done-email").innerHTML = guestEmail;
-    }
-    let guestPhone = document.getElementById("guest-phone").value;
-    let phoneNumber = formatPhoneNumber(guestPhone);
-    document.getElementById("step-two-done-phone").innerHTML = phoneNumber;
-    if(phoneNumber === "Can't recognize phone number"){
-      return false;
-    }
-    return true;
-  }
-  
-  function confirmBooking(){
-    document.getElementById("confirm-name").innerHTML = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value;
-    document.getElementById("confirm-name0").value = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value;
-  
-    document.getElementById("confirm-email").innerHTML = document.getElementById('guest-email').value;
-    document.getElementById("confirm-email0").value = document.getElementById('guest-email').value;
-  
-    let guestPhone = document.getElementById('guest-phone').value;
-    document.getElementById("confirm-phone").innerHTML = formatPhoneNumber(guestPhone);
-    document.getElementById("confirm-phone0").value = formatPhoneNumber(guestPhone);
-    
-    const totalGuests = Number(document.getElementById('adults').value) + Number(document.getElementById('children').value);
-    document.getElementById("confirm-totalNumber").innerHTML = totalGuests;
-    document.getElementById("confirm-totalNumber0").value = totalGuests;
-    
-    document.getElementById("confirm-adults").innerHTML = document.getElementById('adults').value;
-    document.getElementById("confirm-adults0").value = document.getElementById('adults').value;
-    
-    document.getElementById("confirm-children").innerHTML = document.getElementById('children').value;
-    document.getElementById("confirm-children0").value = document.getElementById('children').value;
-  
-    const numOfPets = Number(document.getElementById('pets').value);
-    document.getElementById("confirm-pets").innerHTML = numOfPets;
-    document.getElementById("confirm-pets0").value = numOfPets;
-    
-      const cabinSelect = document.getElementById('cabin-selection');
-      const cabinSelected = cabinSelect.options[cabinSelect.selectedIndex].text;
-    document.getElementById("confirm-cabin").innerHTML = cabinSelected;
-    document.getElementById("confirm-cabin0").value = cabinSelected;
-   
-      const startDate = document.getElementById('date-select').value.slice(0,10); 
-      const endDate = document.getElementById('date-select').value.slice(13,23); 
-      const startDateFormatted = new Date(Date.parse(startDate));
-      const endDateFormatted = new Date(Date.parse(endDate));
-      const startDateParse = startDateFormatted.toString().slice(0,15);
-      const endDateParse = endDateFormatted.toString().slice(0,15);
-      const nights = Math.round((endDateFormatted-startDateFormatted)/(1000*60*60*24));
-      const confirmStartDate = startDateParse.slice(0,3) + ", " + startDateParse.slice(8,11) + startDateParse.slice(4,8) + startDateParse.slice(11,15); 
-      const confirmEndDate = endDateParse.slice(0,3) + ", " + endDateParse.slice(8,11) + endDateParse.slice(4,8) + endDateParse.slice(11,15);
+    const confirmStartDate = startDateParse.slice(0,3) + ", " + startDateParse.slice(8,11) + startDateParse.slice(4,8) + startDateParse.slice(11,15); 
+    const confirmEndDate = endDateParse.slice(0,3) + ", " + endDateParse.slice(8,11) + endDateParse.slice(4,8) + endDateParse.slice(11,15);
     document.getElementById("confirm-startDate").innerHTML = confirmStartDate;
     document.getElementById("confirm-startDate0").value = confirmStartDate;
     document.getElementById("confirm-endDate").innerHTML = confirmEndDate;
     document.getElementById("confirm-endDate0").value = confirmEndDate;
     document.getElementById("confirm-daterange0").value = document.getElementById("date-select").value;
-    
+    //Number of nights
     document.getElementById("confirm-nights").innerHTML = nights;
     document.getElementById("confirm-nights0").value = nights;
-    
+    //Adds their person coments
     document.getElementById("confirm-message").innerHTML = document.getElementById('add-comment').value;
     document.getElementById("confirm-message0").value = document.getElementById('add-comment').value;
-    
+      //Calculates the nightly cost here (rather than sending it to the function because here I can display each section so they can see the breakdown)
       let nightlyCost = calcNightlyCost(cabinSelected, nights, totalGuests, numOfPets);
       const cabinCost = nightlyCost.toFixed(2).toString();
       let guestCharge = "0";
@@ -152,14 +153,15 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
     document.getElementById("confirm-cost").innerHTML = totalCost;
     document.getElementById("confirm-cost0").value = totalCost;
   
-  
+    //This displays the cost breakdown
     document.getElementById("cost-calculator").innerHTML = "-Cost Breakdown-<br>" + cabinSelected + ": $" + cabinCost +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge + "<br>" + nights + " night(s) @ $" + nightlyCost.toString() + "/night";
     document.getElementById("cost-calculator0").value = "-Cost Breakdown-<br>" + cabinSelected + ": $" + cabinCost +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge + "<br>" + nights + " night(s) @ $" + nightlyCost.toString() + "/night";
   }
   
-  function toStepOne(){
-    if(window.innerWidth > 670){
-      document.getElementById("step-one-filling").style.display = 'block';
+
+  function toStepOne(){ 
+    if(window.innerWidth > 670){ 
+      document.getElementById("step-one-filling").style.display = 'block'; cha
       document.getElementById("step-one-done").style.display = 'none';
       stepOneLeft.style.marginLeft = '15%';
       stepOneLeft.style.backgroundColor = '#fff';
