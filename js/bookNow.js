@@ -161,7 +161,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
 
   function toStepOne(){ 
     if(window.innerWidth > 670){ 
-      document.getElementById("step-one-filling").style.display = 'block'; cha
+      document.getElementById("step-one-filling").style.display = 'block';
       document.getElementById("step-one-done").style.display = 'none';
       stepOneLeft.style.marginLeft = '15%';
       stepOneLeft.style.backgroundColor = '#fff';
