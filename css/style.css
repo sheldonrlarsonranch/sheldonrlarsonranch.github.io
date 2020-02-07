@@ -819,6 +819,88 @@ footer a{
     margin: 0px 16px 20px 48px;
 }
 
+#safety-agreement{
+    display: inline;
+    font-family: var(--default-font-family);
+    color: #555;
+    margin: 0px 8px 0px 8px; 
+    padding-left: 10px;
+}
+
+#safety-agreement a{
+    color: var(--other-accent);
+}
+
+/* Customize checkbox */
+.checkbox-label{
+    display: block;
+    position: relative;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-custom{
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 1px #555;
+    cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-custom:hover{
+    background-color: #555;
+  }
+  
+  /* When the checkbox is checked, add a background */
+  .checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #555;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-label input:checked ~ .checkbox-custom:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-label .checkbox-custom:after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
 /* Step Three Completed */
 #step-three-done{
     background-color: #fff;

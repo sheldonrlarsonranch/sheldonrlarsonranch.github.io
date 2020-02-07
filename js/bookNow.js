@@ -64,12 +64,15 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
   
   function stepTwoDone(){
     if(document.getElementById('first-name').value === ""){ //Makes sure there's at least a first name given
+      alert("Please enter your name"); //creates an alert indicating missing information
       return false;
     }else{
       const guestName = document.getElementById('first-name').value  + " " + document.getElementById('last-name').value; //puts first name and last name together
       document.getElementById("step-two-done-name").innerHTML = guestName; //puts name in step two done section
     }
+
     if(document.getElementById('guest-email').value === ""){ //Makes sure an email is given
+      alert("Please enter a valid e-mail address so we can confirm your booking");//creates an alert indicating missing information
       return false;
     }else{
       const guestEmail = document.getElementById("guest-email").value;
@@ -79,6 +82,12 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
     let phoneNumber = formatPhoneNumber(guestPhone); //Sends phone number to function to get formatted
     document.getElementById("step-two-done-phone").innerHTML = phoneNumber; //Places phone number in step two done section
     if(phoneNumber === "Can't recognize phone number"){ //Error if phone number is inccorect
+      alert("Please enter a valid phone number");//creates an alert indicating missing information
+      return false;
+    }
+
+    if(document.getElementById("safety-checkbox").checked == false){ //Makes sure they agree to terms and conditions
+      alert("Please agree to the terms and conditions and safety waiver");//creates an alert indicating missing information
       return false;
     }
     return true;
@@ -301,9 +310,7 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
   }
   
   function toStepThree(){
-    stepTwoDone();
     if(!stepTwoDone()){
-      alert("Please ensure all fields are filled out correctly (i.e. phone number field contains only number and not letters, and all other fields do indeed contain text, thank you!\n\nIf there still seems to be an error please send us an email directly with your booking information at SheldonRLarsonRanch@gmail.com")
       return;
     }
     if(window.innerWidth > 670){
