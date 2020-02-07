@@ -165,6 +165,8 @@ const calcNightlyCost = (cabinSelected, nights, guests, numOfPets) => {
     //This displays the cost breakdown
     document.getElementById("cost-calculator").innerHTML = "-Cost Breakdown-<br>" + cabinSelected + ": $" + cabinCost +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge + "<br>" + nights + " night(s) @ $" + nightlyCost.toString() + "/night";
     document.getElementById("cost-calculator0").value = "-Cost Breakdown-<br>" + cabinSelected + ": $" + cabinCost +"<br>Extra Guests: $" + guestCharge + "<br>Pet Charge: $" + petCharge + "<br>" + nights + " night(s) @ $" + nightlyCost.toString() + "/night";
+  
+    document.getElementById("safety-agree0").value = document.getElementById("safety-checkbox").checked;
   }
   
 
