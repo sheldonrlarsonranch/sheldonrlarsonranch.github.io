@@ -1043,6 +1043,13 @@ footer a{
     margin-bottom: 8px;
 }
 
+/* SNOWMOBILING PAGE*/
+.overview-container iframe{
+    width: 90%;
+    height: 35.4vw;
+    margin: 0 0 0 5%;
+}
+
 /* OVERVIEW PAGE */
 .overview-section-spacer{
     display: none;
@@ -1908,6 +1915,11 @@ footer a{
         width: 80vw;
     }
 
+    /*snowmobiling video*/
+    .overview-container iframe{
+    height: 40.45vw;
+}
+
     /*Main cabin page*/
     .cabin-image-carousel-container{
         width: 77vw;
@@ -1916,7 +1928,7 @@ footer a{
 
 }
 
-@media only screen and (max-width: 971px){
+@media only screen and (max-width: 975px){
     /* Book now page */
     .bookNow-left{
         width: 25vw;
@@ -2119,6 +2131,11 @@ footer a{
         width: 90vw;
     }
 
+    /*snowmobiling-video*/
+    .overview-container iframe{
+        height: 45.5vw;
+    }
+
     /*Main cabin page*/
     .cabin-image-carousel-container{
         width: 86vw;
@@ -2183,6 +2200,11 @@ footer a{
     /* Overview Container */
     .overview-container{
         width: 100vw;
+    }
+
+    /*snowmobiling-video*/
+    .overview-container iframe{
+        height: 50.5vw;
     }
 
     /*Main cabin page*/
