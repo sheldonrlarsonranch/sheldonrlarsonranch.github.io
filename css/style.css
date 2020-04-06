@@ -1043,7 +1043,7 @@ footer a{
     margin-bottom: 8px;
 }
 
-/* SNOWMOBILING PAGE*/
+/* ATTRACTION PAGE VIDEOS*/
 .overview-container iframe{
     width: 90%;
     height: 35.4vw;
@@ -1915,7 +1915,7 @@ footer a{
         width: 80vw;
     }
 
-    /*snowmobiling video*/
+    /* ATTRACTION PAGE VIDEOS*/
     .overview-container iframe{
     height: 40.45vw;
 }
@@ -2131,7 +2131,7 @@ footer a{
         width: 90vw;
     }
 
-    /*snowmobiling-video*/
+    /* ATTRACTION PAGE VIDEOS*/
     .overview-container iframe{
         height: 45.5vw;
     }
@@ -2202,7 +2202,7 @@ footer a{
         width: 100vw;
     }
 
-    /*snowmobiling-video*/
+    /* ATTRACTION PAGE VIDEOS*/
     .overview-container iframe{
         height: 50.5vw;
     }
